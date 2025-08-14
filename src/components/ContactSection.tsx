@@ -44,14 +44,10 @@ const ContactSection = () => {
               </p>
               <div className="space-y-3">
                 <p className="text-sm text-muted-foreground">Paras Dhiman</p>
-                <div className="space-y-2">
-                  <Button variant="cyber" size="sm" className="w-full">
-                    +91 99147 01780
-                  </Button>
-                  <Button variant="cyber" size="sm" className="w-full">
-                    +91 70874 01780
-                  </Button>
-                </div>
+                <Button variant="cyber" size="lg" className="w-full">
+                  <Mail className="w-4 h-4 mr-2" />
+                  Contact Us
+                </Button>
               </div>
             </div>
           </Card>

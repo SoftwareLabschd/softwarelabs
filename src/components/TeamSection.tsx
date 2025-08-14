@@ -1,18 +1,14 @@
 import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Phone, Code, Search, Palette } from "lucide-react";
+import { Code, Search, Palette } from "lucide-react";
 
 const TeamSection = () => {
   const teamMembers = [
     {
       name: "Paras Dhiman",
       role: "Founder & Lead Developer",
-      age: "15 years old",
-      school: "St. Soldier's International School, Chandigarh",
       description: "Coding prodigy and architect of SoftwareLabs, bridging creativity with code.",
       skills: ["Python", "HTML", "CSS", "JavaScript"],
       projects: ["Fake Terminal Simulators", "Q&A Bots", "Code Typers", "Interactive UI Effects"],
-      phones: ["+91 99147 01780", "+91 70874 01780"],
       icon: Code,
       gradient: "from-tech-green to-cyber-purple"
     },
@@ -20,7 +16,6 @@ const TeamSection = () => {
       name: "Arhan",
       role: "Creative Supporter & Analyst",
       description: "Bug spotter and logic debugger who ensures every idea is stable before release. Precision and test reports help polish each build.",
-      phones: ["+91 90387 04888"],
       focus: "Bug Reporter & Feature Analyst",
       icon: Search,
       gradient: "from-cyber-purple to-neural-blue"
@@ -29,7 +24,6 @@ const TeamSection = () => {
       name: "Devanshi",
       role: "UI/UX Critique & Designer",
       description: "Perfects the visual experience of SoftwareLabs' tools. Transforms functionality into elegance and seamless flow.",
-      phones: ["+91 88475 84631"],
       focus: "UI Flow Feedback & Aesthetic Improvements",
       icon: Palette,
       gradient: "from-neural-blue to-tech-green"
@@ -67,12 +61,6 @@ const TeamSection = () => {
                   </div>
                   <h3 className="text-2xl font-bold text-foreground mb-2">{member.name}</h3>
                   <p className="text-tech-green font-semibold mb-1">{member.role}</p>
-                  {member.age && (
-                    <p className="text-sm text-muted-foreground">{member.age}</p>
-                  )}
-                  {member.school && (
-                    <p className="text-sm text-muted-foreground mt-1">{member.school}</p>
-                  )}
                 </div>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -113,14 +101,6 @@ const TeamSection = () => {
                   </div>
                 )}
 
-                <div className="space-y-2">
-                  {member.phones.map((phone) => (
-                    <Button key={phone} variant="ghost" size="sm" className="w-full justify-start text-left">
-                      <Phone className="w-4 h-4 mr-2 text-tech-green" />
-                      {phone}
-                    </Button>
-                  ))}
-                </div>
               </Card>
             );
           })}
