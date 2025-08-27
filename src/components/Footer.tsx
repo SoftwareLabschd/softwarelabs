@@ -30,13 +30,13 @@ const Footer = () => {
           {/* Contact Links */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
-              href="https://softwarelab.lovable.app" 
+              href="https://softwarelabs.lovable.app" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-tech-green hover:text-tech-green/80 transition-colors"
             >
               <ExternalLink className="w-4 h-4" />
-              softwarelab.lovable.app
+              softwarelabs.lovable.app
             </a>
             <a 
               href="mailto:softwarelabschd@gmail.com"
