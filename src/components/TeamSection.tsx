@@ -5,7 +5,7 @@ const TeamSection = () => {
   const teamMembers = [
     {
       name: "Paras Dhiman",
-      role: "Founder & Lead Developer",
+      role: "Founder/Chairperson",
       description: "Coding prodigy and architect of SoftwareLabs, bridging creativity with code.",
       skills: ["Python", "HTML", "CSS", "JavaScript"],
       projects: ["Fake Terminal Simulators", "Q&A Bots", "Code Typers", "Interactive UI Effects"],
@@ -13,20 +13,12 @@ const TeamSection = () => {
       gradient: "from-tech-green to-cyber-purple"
     },
     {
-      name: "Arhan",
-      role: "Creative Supporter & Analyst",
+      name: "Arhan Saha",
+      role: "Deputy Chairperson",
       description: "Bug spotter and logic debugger who ensures every idea is stable before release. Precision and test reports help polish each build.",
       focus: "Bug Reporter & Feature Analyst",
       icon: Search,
       gradient: "from-cyber-purple to-neural-blue"
-    },
-    {
-      name: "Devanshi",
-      role: "UI/UX Critique & Designer",
-      description: "Perfects the visual experience of SoftwareLabs' tools. Transforms functionality into elegance and seamless flow.",
-      focus: "UI Flow Feedback & Aesthetic Improvements",
-      icon: Palette,
-      gradient: "from-neural-blue to-tech-green"
     }
   ];
 
