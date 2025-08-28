@@ -20,7 +20,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-tech-green">Leadership</h4>
             <div className="space-y-2">
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - PARAS DHIMAN</p>
-              <p className="text-foreground font-medium">DEPUTY CHAIRPERSON - ARHAN SAHA</p>
+              <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - ARHAN SAHA</p>
             </div>
           </div>
 

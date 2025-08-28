@@ -14,7 +14,7 @@ const TeamSection = () => {
     },
     {
       name: "Arhan Saha",
-      role: "Deputy Chairperson",
+      role: "Founder/Chairperson",
       description: "Bug spotter and logic debugger who ensures every idea is stable before release. Precision and test reports help polish each build.",
       focus: "Bug Reporter & Feature Analyst",
       icon: Search,
