@@ -22,6 +22,8 @@ const buttonVariants = cva(
         tech: "bg-tech-green text-background hover:bg-tech-green-glow hover:shadow-glow-green transition-all duration-300",
         cyber: "bg-cyber-purple text-foreground hover:bg-cyber-purple-glow hover:shadow-glow-purple transition-all duration-300",
         "tech-outline": "border border-tech-green text-tech-green hover:bg-tech-green hover:text-background transition-all duration-300",
+        "cyber-glow": "bg-gradient-cyber text-background font-bold shadow-lg shadow-purple-500/30 hover:shadow-xl hover:shadow-purple-400/50 hover:scale-105 transition-all duration-300 animate-glow-pulse",
+        "neon-outline": "border-2 border-pink-400 text-pink-400 bg-transparent hover:bg-pink-400/10 hover:text-pink-300 hover:border-pink-300 hover:shadow-lg hover:shadow-pink-400/30 transition-all duration-300"
       },
       size: {
         default: "h-10 px-4 py-2",

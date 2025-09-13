@@ -42,10 +42,8 @@ const ProjectsSection = () => {
     <section className="py-20 px-4 bg-secondary/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Our Projects
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-cyber bg-clip-text text-transparent animate-glow" style={{ fontFamily: 'Exo 2, sans-serif' }}>
+            Our Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             We create tools that educate through interaction, entertain through illusion, 
@@ -57,19 +55,19 @@ const ProjectsSection = () => {
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <Card key={project.title} className={`
-                bg-gradient-card p-8 border-border/50 hover:border-${project.color}/50 
-                transition-all duration-500 hover:shadow-tech group animate-fade-in-up
-              `} style={{ animationDelay: `${index * 150}ms` }}>
+              <Card key={project.title} className="
+                bg-background/80 backdrop-blur-sm p-8 border-cyan-400/20 hover:border-cyan-400/40 
+                transition-all duration-500 hover:shadow-neon group animate-fade-in-up hover:scale-105
+              " style={{ animationDelay: `${index * 150}ms` }} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="flex items-start space-x-4 mb-6">
-                  <div className={`
-                    w-12 h-12 rounded-lg bg-${project.color}/20 flex items-center justify-center 
-                    group-hover:bg-${project.color}/30 transition-colors duration-300
-                  `}>
-                    <IconComponent className={`w-6 h-6 text-${project.color}`} />
+                  <div className="
+                    w-12 h-12 rounded-lg bg-gradient-neon flex items-center justify-center 
+                    group-hover:scale-110 transition-transform duration-300
+                  ">
+                    <IconComponent className="w-6 h-6 text-background" />
                   </div>
                   <div className="flex-1">
-                    <span className={`text-sm font-semibold text-${project.color} mb-2 block`}>
+                    <span className="text-sm font-semibold text-neon mb-2 block">
                       {project.category}
                     </span>
                     <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
@@ -98,8 +96,10 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="hero" size="lg">
+          <Button variant="cyber-glow" size="lg" className="group">
+            <i className="fas fa-folder-open mr-2"></i>
             View All Projects
+            <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
           </Button>
         </div>
       </div>

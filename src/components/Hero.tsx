@@ -15,23 +15,23 @@ const Hero = () => {
       
       {/* Floating Tech Elements */}
       <div className="absolute top-20 left-10 animate-float">
-        <Terminal className="w-8 h-8 text-tech-green opacity-60" />
+        <Terminal className="w-8 h-8 text-neon opacity-60" />
       </div>
       <div className="absolute top-40 right-20 animate-float delay-1000">
-        <Code2 className="w-6 h-6 text-cyber-purple opacity-60" />
+        <Code2 className="w-6 h-6 text-purple-400 opacity-60" />
       </div>
       <div className="absolute bottom-40 left-20 animate-float delay-2000">
-        <Sparkles className="w-7 h-7 text-neural-blue opacity-60" />
+        <Sparkles className="w-7 h-7 text-blue-400 opacity-60" />
       </div>
       
       {/* Hero Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in-up">
         <div className="mb-6">
-          <span className="text-tech-green text-lg font-mono tracking-wider">©SoftwareLabs</span>
+          <span className="text-neon text-lg font-mono tracking-wider glow-text" style={{ fontFamily: 'JetBrains Mono, monospace' }}>©SoftwareLabs</span>
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="bg-gradient-primary bg-clip-text text-transparent">
+          <span className="bg-gradient-cyber bg-clip-text text-transparent animate-glow font-extrabold" style={{ fontFamily: 'Exo 2, sans-serif' }}>
             Fueling the Future
           </span>
           <br />
@@ -40,23 +40,25 @@ const Hero = () => {
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
           Where youthful genius meets transformative thinking. We create tools that 
-          <span className="text-tech-green"> educate</span>, 
-          <span className="text-cyber-purple"> entertain</span>, and 
-          <span className="text-neural-blue"> empower</span> through innovative software design.
+          <span className="text-neon font-semibold"> educate</span>, 
+          <span className="text-purple-400 font-semibold"> entertain</span>, and 
+          <span className="text-blue-400 font-semibold"> empower</span> through innovative software design.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button variant="hero" size="lg" className="animate-glow-pulse">
+          <Button variant="cyber-glow" size="lg" className="animate-glow-pulse">
+            <i className="fas fa-rocket"></i>
             Explore Projects
           </Button>
           <Button variant="tech-outline" size="lg">
+            <i className="fas fa-users"></i>
             Meet the Team
           </Button>
         </div>
         
         <div className="text-center">
-          <blockquote className="text-2xl md:text-3xl italic text-muted-foreground border-l-4 border-tech-green pl-4 mx-auto max-w-2xl">
-            "Our code is not just written. It is crafted."
+          <blockquote className="text-2xl md:text-3xl italic text-muted-foreground border-l-4 border-neon pl-4 mx-auto max-w-2xl animate-fade-in-up">
+            "Our code is not just written. It is <span className="text-neon font-semibold">crafted</span>."
           </blockquote>
         </div>
       </div>

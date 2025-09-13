@@ -57,6 +57,10 @@ export default {
 				'cyber-purple': 'hsl(var(--cyber-purple))',
 				'cyber-purple-glow': 'hsl(var(--cyber-purple-glow))',
 				'neural-blue': 'hsl(var(--neural-blue))',
+				'primary-neon': 'hsl(var(--primary-neon))',
+				'secondary-neon': 'hsl(var(--secondary-neon))',
+				'accent-purple': 'hsl(var(--accent-purple))',
+				'neon': 'hsl(var(--primary-neon))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -123,13 +127,17 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-card': 'var(--gradient-card)'
+				'gradient-card': 'var(--gradient-card)',
+				'gradient-neon': 'var(--gradient-neon)',
+				'gradient-cyber': 'var(--gradient-cyber)'
 			},
 			boxShadow: {
 				'glow-green': 'var(--glow-green)',
 				'glow-purple': 'var(--glow-purple)',
-				'tech': 'var(--shadow-tech)'
-			}
+				'glow-neon': 'var(--glow-neon)',
+				'tech': 'var(--shadow-tech)',
+				'neon': 'var(--shadow-neon)'
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
