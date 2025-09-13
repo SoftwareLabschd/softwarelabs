@@ -55,14 +55,14 @@ const ProjectsSection = () => {
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
-              <Card key={project.title} className="
-                bg-background/80 backdrop-blur-sm p-8 border-cyan-400/20 hover:border-cyan-400/40 
-                transition-all duration-500 hover:shadow-neon group animate-fade-in-up hover:scale-105
-              " style={{ animationDelay: `${index * 150}ms` }} data-aos="fade-up" data-aos-delay={index * 100}>
+              <Card key={project.title} className={`
+                glass-strong p-8 hover-lift animate-spring-in stagger-${index + 1}
+                transition-all duration-500 hover:border-cyan-400/40 group
+              `} data-aos="fade-up" data-aos-delay={index * 100}>
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="
                     w-12 h-12 rounded-lg bg-gradient-neon flex items-center justify-center 
-                    group-hover:scale-110 transition-transform duration-300
+                    group-hover:scale-110 hover-glow transition-all duration-300
                   ">
                     <IconComponent className="w-6 h-6 text-background" />
                   </div>
@@ -70,7 +70,9 @@ const ProjectsSection = () => {
                     <span className="text-sm font-semibold text-neon mb-2 block">
                       {project.category}
                     </span>
-                    <h3 className="text-xl font-bold text-foreground mb-2">{project.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-neon transition-colors">
+                      {project.title}
+                    </h3>
                   </div>
                 </div>
 
@@ -81,12 +83,12 @@ const ProjectsSection = () => {
                 <div className="flex items-center justify-between">
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm">
+                      <span key={tech} className="px-3 py-1 glass text-secondary-foreground rounded-full text-sm hover-scale">
                         {tech}
                       </span>
                     ))}
                   </div>
-                  <Button variant="ghost" size="sm" className="text-tech-green hover:text-tech-green-glow">
+                  <Button variant="ghost" size="sm" className="text-tech-green hover:text-tech-green-glow hover-lift">
                     <ExternalLink className="w-4 h-4" />
                   </Button>
                 </div>
@@ -96,7 +98,7 @@ const ProjectsSection = () => {
         </div>
 
         <div className="text-center">
-          <Button variant="cyber-glow" size="lg" className="group">
+          <Button variant="cyber-glow" size="lg" className="group hover-lift animate-elastic-in delay-3000">
             <i className="fas fa-folder-open mr-2"></i>
             View All Projects
             <i className="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>

@@ -46,18 +46,18 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button variant="cyber-glow" size="lg" className="animate-glow-pulse">
+          <Button variant="cyber-glow" size="lg" className="animate-spring-in hover-lift stagger-1">
             <i className="fas fa-rocket"></i>
             Explore Projects
           </Button>
-          <Button variant="tech-outline" size="lg">
+          <Button variant="tech-outline" size="lg" className="animate-spring-in hover-glow stagger-2">
             <i className="fas fa-users"></i>
             Meet the Team
           </Button>
         </div>
         
         <div className="text-center">
-          <blockquote className="text-2xl md:text-3xl italic text-muted-foreground border-l-4 border-neon pl-4 mx-auto max-w-2xl animate-fade-in-up">
+          <blockquote className="text-2xl md:text-3xl italic text-muted-foreground border-l-4 border-neon pl-4 mx-auto max-w-2xl animate-elastic-in stagger-3 glass p-6 rounded-lg backdrop-blur-md">
             "Our code is not just written. It is <span className="text-neon font-semibold">crafted</span>."
           </blockquote>
         </div>

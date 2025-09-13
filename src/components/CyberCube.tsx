@@ -29,9 +29,9 @@ const CyberCube = () => {
       >
         {/* Cube faces */}
         <div 
-          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold backdrop-blur-sm border-2 transition-all duration-300 ${
+          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold glass border-2 transition-all duration-300 hover-glow ${
             isHovered 
-              ? 'bg-pink-500/10 border-pink-400 text-pink-400 shadow-lg shadow-pink-400/30' 
+              ? 'bg-pink-500/10 border-pink-400 text-pink-400 drop-shadow-lg' 
               : 'bg-cyan-400/10 border-cyan-400 text-cyan-400'
           }`}
           style={{ transform: 'rotateY(0deg) translateZ(96px)' }}
@@ -39,9 +39,9 @@ const CyberCube = () => {
           CYBER
         </div>
         <div 
-          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold backdrop-blur-sm border-2 transition-all duration-300 ${
+          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold glass border-2 transition-all duration-300 hover-glow ${
             isHovered 
-              ? 'bg-pink-500/10 border-pink-400 text-pink-400 shadow-lg shadow-pink-400/30' 
+              ? 'bg-pink-500/10 border-pink-400 text-pink-400 drop-shadow-lg' 
               : 'bg-cyan-400/10 border-cyan-400 text-cyan-400'
           }`}
           style={{ transform: 'rotateY(180deg) translateZ(96px)' }}
@@ -49,9 +49,9 @@ const CyberCube = () => {
           NEXUS
         </div>
         <div 
-          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold backdrop-blur-sm border-2 transition-all duration-300 ${
+          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold glass border-2 transition-all duration-300 hover-glow ${
             isHovered 
-              ? 'bg-pink-500/10 border-pink-400 text-pink-400 shadow-lg shadow-pink-400/30' 
+              ? 'bg-pink-500/10 border-pink-400 text-pink-400 drop-shadow-lg' 
               : 'bg-cyan-400/10 border-cyan-400 text-cyan-400'
           }`}
           style={{ transform: 'rotateY(90deg) translateZ(96px)' }}
@@ -59,9 +59,9 @@ const CyberCube = () => {
           3D
         </div>
         <div 
-          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold backdrop-blur-sm border-2 transition-all duration-300 ${
+          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold glass border-2 transition-all duration-300 hover-glow ${
             isHovered 
-              ? 'bg-pink-500/10 border-pink-400 text-pink-400 shadow-lg shadow-pink-400/30' 
+              ? 'bg-pink-500/10 border-pink-400 text-pink-400 drop-shadow-lg' 
               : 'bg-cyan-400/10 border-cyan-400 text-cyan-400'
           }`}
           style={{ transform: 'rotateY(-90deg) translateZ(96px)' }}
@@ -69,9 +69,9 @@ const CyberCube = () => {
           TECH
         </div>
         <div 
-          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold backdrop-blur-sm border-2 transition-all duration-300 ${
+          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold glass border-2 transition-all duration-300 hover-glow ${
             isHovered 
-              ? 'bg-pink-500/10 border-pink-400 text-pink-400 shadow-lg shadow-pink-400/30' 
+              ? 'bg-pink-500/10 border-pink-400 text-pink-400 drop-shadow-lg' 
               : 'bg-cyan-400/10 border-cyan-400 text-cyan-400'
           }`}
           style={{ transform: 'rotateX(90deg) translateZ(96px)' }}
@@ -79,9 +79,9 @@ const CyberCube = () => {
           AI
         </div>
         <div 
-          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold backdrop-blur-sm border-2 transition-all duration-300 ${
+          className={`absolute w-48 h-48 flex items-center justify-center text-2xl font-bold glass border-2 transition-all duration-300 hover-glow ${
             isHovered 
-              ? 'bg-pink-500/10 border-pink-400 text-pink-400 shadow-lg shadow-pink-400/30' 
+              ? 'bg-pink-500/10 border-pink-400 text-pink-400 drop-shadow-lg' 
               : 'bg-cyan-400/10 border-cyan-400 text-cyan-400'
           }`}
           style={{ transform: 'rotateX(-90deg) translateZ(96px)' }}
