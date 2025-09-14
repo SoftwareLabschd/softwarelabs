@@ -61,10 +61,10 @@ const MatrixBackground = () => {
 
   return (
     <>
-      <div className="fixed inset-0 bg-gradient-to-br from-background via-purple-950/20 to-blue-950/20 -z-30" />
+      <div className="fixed inset-0 bg-gradient-to-br from-background via-purple-950/20 to-blue-950/20 z-[-50]" />
       <canvas
         ref={canvasRef}
-        className="fixed top-0 left-0 -z-20 opacity-30"
+        className="fixed top-0 left-0 z-[-40] opacity-30"
       />
     </>
   );

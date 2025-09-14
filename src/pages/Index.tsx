@@ -17,6 +17,7 @@ const Index = () => {
       <MatrixBackground />
       <ParticleSystem />
       <FloatingOrbs />
+      <div id="layer-effects" className="fixed inset-0 pointer-events-none z-[-25]" />
       <InteractiveEffects />
       <Hero />
       <ParallaxContainer speed={0.3}>

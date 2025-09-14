@@ -11,15 +11,17 @@ const InteractiveEffects = () => {
       });
     }
 
+    const container = document.getElementById('layer-effects') || document.body;
+
     // Mouse trail effect
     const handleMouseMove = (e: MouseEvent) => {
       if (Math.random() > 0.95) {
         const trail = document.createElement('div');
-        trail.className = 'fixed w-0.5 h-0.5 bg-cyan-400 rounded-full pointer-events-none z-50 shadow-lg shadow-cyan-400/50';
+        trail.className = 'fixed w-0.5 h-0.5 bg-cyan-400 rounded-full pointer-events-none z-0 shadow shadow-cyan-400/30';
         trail.style.left = e.clientX + 'px';
         trail.style.top = e.clientY + 'px';
         
-        document.body.appendChild(trail);
+        container.appendChild(trail);
         
         setTimeout(() => {
           trail.style.opacity = '0';
@@ -33,13 +35,13 @@ const InteractiveEffects = () => {
     // Click ripple effect
     const handleClick = (e: MouseEvent) => {
       const ripple = document.createElement('div');
-      ripple.className = 'fixed w-12 h-12 border-2 border-cyan-400 rounded-full pointer-events-none z-50';
+      ripple.className = 'fixed w-12 h-12 border-2 border-cyan-400 rounded-full pointer-events-none z-0';
       ripple.style.left = (e.clientX - 24) + 'px';
       ripple.style.top = (e.clientY - 24) + 'px';
       ripple.style.transform = 'scale(0)';
       ripple.style.opacity = '1';
       
-      document.body.appendChild(ripple);
+      container.appendChild(ripple);
       
       setTimeout(() => {
         ripple.style.transform = 'scale(4)';
@@ -55,7 +57,7 @@ const InteractiveEffects = () => {
       const size = Math.random() * 4 + 2;
       const color = Math.random() > 0.5 ? '#00ffff' : '#ff0080';
       
-      particle.className = 'fixed rounded-full pointer-events-none z-10 opacity-60';
+      particle.className = 'fixed rounded-full pointer-events-none z-0 opacity-40';
       particle.style.width = size + 'px';
       particle.style.height = size + 'px';
       particle.style.backgroundColor = color;
@@ -63,7 +65,7 @@ const InteractiveEffects = () => {
       particle.style.top = window.innerHeight + 'px';
       particle.style.boxShadow = `0 0 10px ${color}`;
       
-      document.body.appendChild(particle);
+      container.appendChild(particle);
       
       const duration = Math.random() * 10000 + 5000;
       const horizontalMovement = Math.random() * 200 - 100;
@@ -82,13 +84,13 @@ const InteractiveEffects = () => {
       const sparkle = document.createElement('div');
       const color = Math.random() > 0.5 ? '#00ffff' : '#ff0080';
       
-      sparkle.className = 'fixed w-1 h-1 rounded-full pointer-events-none z-10';
+      sparkle.className = 'fixed w-1 h-1 rounded-full pointer-events-none z-0';
       sparkle.style.backgroundColor = color;
       sparkle.style.left = Math.random() * window.innerWidth + 'px';
       sparkle.style.top = Math.random() * window.innerHeight + 'px';
       sparkle.style.boxShadow = `0 0 10px ${color}`;
       
-      document.body.appendChild(sparkle);
+      container.appendChild(sparkle);
       
       setTimeout(() => {
         sparkle.style.opacity = '0';

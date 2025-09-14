@@ -1,6 +1,6 @@
 const FloatingOrbs = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden pointer-events-none -z-15">
+    <div className="fixed inset-0 overflow-hidden pointer-events-none z-[-30]">
       <div className="absolute w-24 h-24 rounded-full bg-gradient-to-r from-cyan-400/5 to-transparent animate-float-orb top-1/4 left-1/12" />
       <div className="absolute w-36 h-36 rounded-full bg-gradient-to-r from-purple-400/5 to-transparent animate-float-orb top-3/5 right-1/5 delay-1000" />
       <div className="absolute w-20 h-20 rounded-full bg-gradient-to-r from-blue-400/5 to-transparent animate-float-orb bottom-1/3 left-1/3 delay-2000" />
