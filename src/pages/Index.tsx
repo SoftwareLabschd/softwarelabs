@@ -8,19 +8,32 @@ import MatrixBackground from "@/components/MatrixBackground";
 import FloatingOrbs from "@/components/FloatingOrbs";
 import InteractiveEffects from "@/components/InteractiveEffects";
 import CyberCube from "@/components/CyberCube";
+import ParticleSystem from "@/components/ParticleSystem";
+import ParallaxContainer from "@/components/ParallaxContainer";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
       <MatrixBackground />
+      <ParticleSystem />
       <FloatingOrbs />
       <InteractiveEffects />
       <Hero />
-      <AboutSection />
-      <ProjectsSection />
-      <CyberCube />
-      <TeamSection />
-      <ContactSection />
+      <ParallaxContainer speed={0.3}>
+        <AboutSection />
+      </ParallaxContainer>
+      <ParallaxContainer speed={0.5}>
+        <ProjectsSection />
+      </ParallaxContainer>
+      <ParallaxContainer speed={0.2}>
+        <CyberCube />
+      </ParallaxContainer>
+      <ParallaxContainer speed={0.4}>
+        <TeamSection />
+      </ParallaxContainer>
+      <ParallaxContainer speed={0.3}>
+        <ContactSection />
+      </ParallaxContainer>
       <Footer />
     </div>
   );
