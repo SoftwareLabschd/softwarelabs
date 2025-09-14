@@ -9,7 +9,6 @@ import FloatingOrbs from "@/components/FloatingOrbs";
 import InteractiveEffects from "@/components/InteractiveEffects";
 import CyberCube from "@/components/CyberCube";
 import ParticleSystem from "@/components/ParticleSystem";
-import ParallaxContainer from "@/components/ParallaxContainer";
 
 const Index = () => {
   return (
@@ -20,21 +19,11 @@ const Index = () => {
       <div id="layer-effects" className="fixed inset-0 pointer-events-none z-[-25]" />
       <InteractiveEffects />
       <Hero />
-      <ParallaxContainer speed={0.3}>
-        <AboutSection />
-      </ParallaxContainer>
-      <ParallaxContainer speed={0.5}>
-        <ProjectsSection />
-      </ParallaxContainer>
-      <ParallaxContainer speed={0.2}>
-        <CyberCube />
-      </ParallaxContainer>
-      <ParallaxContainer speed={0.4}>
-        <TeamSection />
-      </ParallaxContainer>
-      <ParallaxContainer speed={0.3}>
-        <ContactSection />
-      </ParallaxContainer>
+      <AboutSection />
+      <ProjectsSection />
+      <CyberCube />
+      <TeamSection />
+      <ContactSection />
       <Footer />
     </div>
   );
