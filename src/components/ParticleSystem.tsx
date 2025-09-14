@@ -35,7 +35,7 @@ const ParticleSystem = () => {
 
     const createParticles = () => {
       const particles: Particle[] = [];
-      const particleCount = Math.min(50, Math.floor(window.innerWidth / 30));
+      const particleCount = Math.min(25, Math.floor(window.innerWidth / 60));
       
       const shapes: Array<'triangle' | 'square' | 'hexagon' | 'circle'> = ['triangle', 'square', 'hexagon', 'circle'];
       const colors = ['#00ffff', '#ff0080', '#00ff00', '#ff6b00', '#8b5cf6'];
@@ -56,7 +56,7 @@ const ParticleSystem = () => {
           rotationSpeed: (Math.random() - 0.5) * 0.02,
           shape: shapes[Math.floor(Math.random() * shapes.length)],
           color: colors[Math.floor(Math.random() * colors.length)],
-          opacity: Math.random() * 0.3 + 0.1
+          opacity: Math.random() * 0.2 + 0.05
         });
       }
       
@@ -194,7 +194,7 @@ const ParticleSystem = () => {
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 pointer-events-none z-5"
+      className="fixed inset-0 pointer-events-none -z-10"
       style={{ background: 'transparent' }}
     />
   );

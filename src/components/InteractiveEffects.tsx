@@ -102,9 +102,9 @@ const InteractiveEffects = () => {
     document.addEventListener('mousemove', handleMouseMove);
     document.addEventListener('click', handleClick);
     
-    // Start intervals
-    const particleInterval = setInterval(createFloatingParticle, 3000);
-    const sparkleInterval = setInterval(createSparkle, 2000);
+    // Start intervals with reduced frequency
+    const particleInterval = setInterval(createFloatingParticle, 5000);
+    const sparkleInterval = setInterval(createSparkle, 4000);
 
     return () => {
       document.removeEventListener('mousemove', handleMouseMove);
