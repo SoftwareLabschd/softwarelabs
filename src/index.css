@@ -48,6 +48,12 @@ All colors MUST be HSL.
     /* Cyber neon colors */
     --primary-neon: 180 100% 50%;
     --secondary-neon: 330 100% 50%;
+    
+    /* Enhanced space theme colors */
+    --space-cyan: 191 100% 50%;
+    --space-pink: 320 100% 50%;
+    --space-purple: 263 70% 50%;
+    --tech-pink: 320 100% 50%;
     --accent-purple: 246 46% 68%;
     --dark-bg: 0 0% 4%;
     --card-bg: 0 0% 100% / 0.05;
@@ -158,7 +164,7 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Rajdhani', 'Poppins', sans-serif;
     overflow-x: hidden;
   }
 }
@@ -191,6 +197,87 @@ All colors MUST be HSL.
     0% { box-shadow: 0 0 0 0 hsl(var(--primary-neon) / 0.7); }
     70% { box-shadow: 0 0 0 10px hsl(var(--primary-neon) / 0); }
     100% { box-shadow: 0 0 0 0 hsl(var(--primary-neon) / 0); }
+  }
+
+  /* Enhanced space theme animations */
+  @keyframes textGlow {
+    from { filter: brightness(1); }
+    to { filter: brightness(1.3); }
+  }
+
+  @keyframes float-enhanced {
+    0%, 100% { 
+      transform: translateY(0px) rotate(0deg) scale(1); 
+    }
+    33% { 
+      transform: translateY(-15px) rotate(120deg) scale(1.1); 
+    }
+    66% { 
+      transform: translateY(-8px) rotate(240deg) scale(0.9); 
+    }
+  }
+
+  @keyframes sparkle {
+    0% { 
+      opacity: 1; 
+      transform: scale(1); 
+    }
+    100% { 
+      opacity: 0; 
+      transform: scale(0) rotate(180deg); 
+    }
+  }
+
+  /* Enhanced font families */
+  .font-orbitron {
+    font-family: 'Orbitron', monospace;
+  }
+
+  .font-rajdhani {
+    font-family: 'Rajdhani', sans-serif;
+  }
+
+  /* Gradient text effects */
+  .text-gradient-cosmic {
+    background: linear-gradient(45deg, hsl(var(--space-cyan)), hsl(var(--space-pink)), hsl(var(--space-purple)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-glow-animate {
+    animation: textGlow 2s ease-in-out infinite alternate;
+  }
+
+  .animate-float-enhanced {
+    animation: float-enhanced 6s ease-in-out infinite;
+  }
+
+  /* Enhanced feature cards */
+  .feature-card-enhanced {
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .feature-card-enhanced:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: hsl(var(--space-cyan));
+    box-shadow: 0 20px 40px hsla(var(--space-cyan) / 0.2);
+  }
+
+  /* Enhanced CTA buttons */
+  .cta-enhanced {
+    background: linear-gradient(45deg, hsl(var(--space-cyan)), hsl(var(--space-purple)));
+    box-shadow: 0 10px 30px hsla(var(--space-cyan) / 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .cta-enhanced:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px hsla(var(--space-cyan) / 0.5);
   }
   
   @keyframes fade-in-up {

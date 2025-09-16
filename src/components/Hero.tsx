@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Terminal, Code2, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import TypingAnimation from "./TypingAnimation";
 
 const Hero = () => {
   return (
@@ -30,15 +31,17 @@ const Hero = () => {
           <span className="text-neon text-lg font-mono tracking-wider glow-text" style={{ fontFamily: 'JetBrains Mono, monospace' }}>©SoftwareLabs</span>
         </div>
         
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-          <span className="bg-gradient-cyber bg-clip-text text-transparent animate-glow font-extrabold" style={{ fontFamily: 'Exo 2, sans-serif' }}>
-            Fueling the Future
-          </span>
-          <br />
-          <span className="text-foreground">with Code & Creativity</span>
-        </h1>
+        <TypingAnimation 
+          text="Fueling the Future"
+          className="text-5xl md:text-7xl font-bold mb-2 leading-tight font-orbitron text-gradient-cosmic text-glow-animate"
+          delay={1000}
+          speed={80}
+        />
+        <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight text-foreground font-rajdhani">
+          with Code & Creativity
+        </h2>
         
-        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed font-rajdhani">
           Where youthful genius meets transformative thinking. We create tools that 
           <span className="text-neon font-semibold"> educate</span>, 
           <span className="text-purple-400 font-semibold"> entertain</span>, and 
@@ -46,18 +49,18 @@ const Hero = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button variant="cyber-glow" size="lg" className="animate-spring-in hover-lift stagger-1">
-            <i className="fas fa-rocket"></i>
+          <Button variant="cyber-glow" size="lg" className="cta-enhanced font-orbitron animate-spring-in hover-lift stagger-1">
+            <i className="fas fa-rocket mr-2"></i>
             Explore Projects
           </Button>
-          <Button variant="tech-outline" size="lg" className="animate-spring-in hover-glow stagger-2">
-            <i className="fas fa-users"></i>
+          <Button variant="tech-outline" size="lg" className="font-rajdhani animate-spring-in hover-glow stagger-2">
+            <i className="fas fa-users mr-2"></i>
             Meet the Team
           </Button>
         </div>
         
         <div className="text-center">
-          <blockquote className="text-2xl md:text-3xl italic text-muted-foreground border-l-4 border-neon pl-4 mx-auto max-w-2xl animate-elastic-in stagger-3 glass p-6 rounded-lg backdrop-blur-md">
+          <blockquote className="text-2xl md:text-3xl italic text-muted-foreground border-l-4 border-neon pl-4 mx-auto max-w-2xl animate-elastic-in stagger-3 glass p-6 rounded-lg backdrop-blur-md font-rajdhani">
             "Our code is not just written. It is <span className="text-neon font-semibold">crafted</span>."
           </blockquote>
         </div>

@@ -6,9 +6,11 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import MatrixBackground from "@/components/MatrixBackground";
 import FloatingOrbs from "@/components/FloatingOrbs";
+import EnhancedFloatingShapes from "@/components/EnhancedFloatingShapes";
 import InteractiveEffects from "@/components/InteractiveEffects";
 import CyberCube from "@/components/CyberCube";
 import ParticleSystem from "@/components/ParticleSystem";
+import InteractivePlanet from "@/components/InteractivePlanet";
 
 const Index = () => {
   return (
@@ -16,11 +18,13 @@ const Index = () => {
       <MatrixBackground />
       <ParticleSystem />
       <FloatingOrbs />
+      <EnhancedFloatingShapes />
       <div id="layer-effects" className="fixed inset-0 pointer-events-none z-[-25]" />
       <InteractiveEffects />
       <Hero />
       <AboutSection />
       <ProjectsSection />
+      <InteractivePlanet />
       <CyberCube />
       <TeamSection />
       <ContactSection />
