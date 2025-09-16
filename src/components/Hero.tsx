@@ -32,7 +32,7 @@ const Hero = () => {
         </div>
         
         <TypingAnimation 
-          text="Fueling the Future"
+          text="FUELING THE FUTURE"
           className="text-5xl md:text-7xl font-bold mb-2 leading-tight font-orbitron text-gradient-cosmic text-glow-animate"
           delay={1000}
           speed={80}
