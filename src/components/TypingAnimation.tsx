@@ -20,7 +20,7 @@ const TypingAnimation = ({ text, className = '', delay = 1000, speed = 100 }: Ty
       
       const typeWriter = () => {
         if (indexRef.current < text.length) {
-          setDisplayText(prev => prev + text.charAt(indexRef.current));
+          setDisplayText(text.substring(0, indexRef.current + 1));
           indexRef.current++;
           setTimeout(typeWriter, speed);
         } else {
