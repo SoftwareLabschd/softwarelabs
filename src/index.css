@@ -45,6 +45,16 @@ All colors MUST be HSL.
     --cyber-purple-glow: 260 76% 65%;
     --neural-blue: 217 91% 60%;
     
+    /* Typography gradient colors */
+    --gradient-text-1: 4 85% 60%; /* #ff6b6b */
+    --gradient-text-2: 174 77% 56%; /* #4ecdc4 */
+    --gradient-text-3: 204 86% 53%; /* #45b7d1 */
+    --gradient-text-4: 45 100% 51%; /* #f9ca24 */
+    
+    /* Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    
     /* Cyber neon colors */
     --primary-neon: 180 100% 50%;
     --secondary-neon: 330 100% 50%;
@@ -205,6 +215,33 @@ All colors MUST be HSL.
     to { filter: brightness(1.3); }
   }
 
+  /* Typography effects */
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% { transform: scale(1); text-shadow: 0 0 10px currentColor; }
+    50% { transform: scale(1.05); text-shadow: 0 0 20px currentColor; }
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+  }
+
+  @keyframes rotate3d {
+    0%, 100% { transform: perspective(1000px) rotateY(0deg); }
+    50% { transform: perspective(1000px) rotateY(10deg); }
+  }
+
+  @keyframes particle-float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+    50% { transform: translateY(-20px) rotate(180deg); opacity: 0.8; }
+  }
+
   @keyframes float-enhanced {
     0%, 100% { 
       transform: translateY(0px) rotate(0deg) scale(1); 
@@ -235,6 +272,69 @@ All colors MUST be HSL.
 
   .font-rajdhani {
     font-family: 'Rajdhani', sans-serif;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-jetbrains {
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .font-exo {
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  /* Typography effects */
+  .animate-gradient-shift {
+    background: linear-gradient(45deg, hsl(var(--gradient-text-1)), hsl(var(--gradient-text-2)), hsl(var(--gradient-text-3)), hsl(var(--gradient-text-4)));
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 3s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s infinite;
+  }
+
+  .animate-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animate-shimmer::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+  }
+
+  .animate-shimmer:hover::before {
+    animation: shimmer 1s ease-in-out;
+  }
+
+  .animate-rotate-3d {
+    animation: rotate3d 4s infinite ease-in-out;
+  }
+
+  .animate-particle-float {
+    animation: particle-float 6s ease-in-out infinite;
+  }
+
+  /* Glass morphism utility */
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
   }
 
   /* Gradient text effects */
