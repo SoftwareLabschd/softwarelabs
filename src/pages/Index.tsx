@@ -11,10 +11,12 @@ import InteractiveEffects from "@/components/InteractiveEffects";
 import CyberCube from "@/components/CyberCube";
 import ParticleSystem from "@/components/ParticleSystem";
 import InteractivePlanet from "@/components/InteractivePlanet";
+import ThemeSelector from "@/components/ThemeSelector";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
+      <ThemeSelector />
       <MatrixBackground />
       <ParticleSystem />
       <FloatingOrbs />
