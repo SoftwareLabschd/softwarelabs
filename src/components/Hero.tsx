@@ -31,6 +31,18 @@ const Hero = () => {
       
       {/* Hero Content */}
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 animate-fade-in-up">
+        {/* SOFTWARELABS Brand */}
+        <div className="mb-8 animate-fade-in-up">
+          <GradientText 
+            font="jetbrains" 
+            animation="shift" 
+            className="text-2xl md:text-3xl font-bold tracking-[0.2em] mb-2"
+          >
+            ©SOFTWARELABS
+          </GradientText>
+          <div className="h-0.5 w-32 mx-auto bg-gradient-to-r from-transparent via-primary to-transparent animate-pulse-glow"></div>
+        </div>
+
         <h1 className="text-6xl md:text-8xl font-bold mb-6 font-orbitron">
           <TypingAnimation 
             text="FUELING THE FUTURE" 
