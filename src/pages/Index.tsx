@@ -12,10 +12,27 @@ import CyberCube from "@/components/CyberCube";
 import ParticleSystem from "@/components/ParticleSystem";
 import InteractivePlanet from "@/components/InteractivePlanet";
 import ThemeSelector from "@/components/ThemeSelector";
+import { ProfileAvatar } from "@/components/ProfileAvatar";
+import { useAuth } from "@/contexts/AuthContext";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Index = () => {
+  const { user } = useAuth();
+
   return (
     <div className="min-h-screen bg-background relative">
+      {/* Header with Auth/Profile */}
+      <div className="fixed top-4 right-4 z-50">
+        {user ? (
+          <ProfileAvatar />
+        ) : (
+          <Button asChild variant="cyber" className="animate-pulse-glow">
+            <Link to="/auth">Login</Link>
+          </Button>
+        )}
+      </div>
+      
       <ThemeSelector />
       <MatrixBackground />
       <ParticleSystem />
