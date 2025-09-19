@@ -46,10 +46,15 @@ export default function Auth() {
               <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Welcome to SoftwareLabs
               </h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Join our innovative platform and unlock a world of possibilities. 
-                Experience cutting-edge technology with a beautiful, intuitive interface.
-              </p>
+              <div className="space-y-2">
+                <p className="text-lg font-semibold text-foreground">
+                  PARAS (CHAIRPERSON) AND ARHAN (CHAIRPERSON)
+                </p>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Join our innovative platform and unlock a world of possibilities. 
+                  Experience cutting-edge technology with a beautiful, intuitive interface.
+                </p>
+              </div>
             </div>
 
             <div className="space-y-4">
