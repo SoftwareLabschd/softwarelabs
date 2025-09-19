@@ -23,7 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background relative">
       {/* Header with Auth/Profile */}
-      <div className="fixed top-4 right-4 z-50">
+      <div className="fixed top-4 left-4 z-50">
         {user ? (
           <ProfileAvatar />
         ) : (

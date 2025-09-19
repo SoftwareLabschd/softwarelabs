@@ -155,6 +155,7 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                       type="email"
                       placeholder="Enter your email"
                       className="h-12 border-border/50 focus:border-primary transition-all duration-300"
+                      autoComplete="email"
                     />
                   </FormControl>
                   <FormMessage />
@@ -173,11 +174,12 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Input
+                       <Input
                         {...field}
                         type={showPassword ? 'text' : 'password'}
                         placeholder="Enter your password"
                         className="h-12 pr-12 border-border/50 focus:border-primary transition-all duration-300"
+                        autoComplete="current-password"
                       />
                       <button
                         type="button"
@@ -252,6 +254,7 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                       {...field}
                       placeholder="Enter your display name"
                       className="h-12 border-border/50 focus:border-primary transition-all duration-300"
+                      autoComplete="name"
                     />
                   </FormControl>
                   <FormMessage />
@@ -274,6 +277,7 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                       type="email"
                       placeholder="Enter your email"
                       className="h-12 border-border/50 focus:border-primary transition-all duration-300"
+                      autoComplete="email"
                     />
                   </FormControl>
                   <FormMessage />
@@ -292,11 +296,12 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Input
+                       <Input
                         {...field}
                         type={showPassword ? 'text' : 'password'}
                         placeholder="Create a password"
                         className="h-12 pr-12 border-border/50 focus:border-primary transition-all duration-300"
+                        autoComplete="new-password"
                       />
                       <button
                         type="button"
@@ -323,11 +328,12 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                   </FormLabel>
                   <FormControl>
                     <div className="relative">
-                      <Input
+                       <Input
                         {...field}
                         type={showConfirmPassword ? 'text' : 'password'}
                         placeholder="Confirm your password"
                         className="h-12 pr-12 border-border/50 focus:border-primary transition-all duration-300"
+                        autoComplete="new-password"
                       />
                       <button
                         type="button"
