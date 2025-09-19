@@ -256,7 +256,6 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                       placeholder="Enter your display name"
                       className="h-12 border-border/50 focus:border-primary transition-all duration-300"
                       autoComplete="name"
-                      disabled={isLoading}
                     />
                   </FormControl>
                   <FormMessage />
@@ -280,7 +279,6 @@ export function AuthForm({ mode, onToggleMode }: AuthFormProps) {
                       placeholder="Enter your email"
                       className="h-12 border-border/50 focus:border-primary transition-all duration-300"
                       autoComplete="email"
-                      disabled={isLoading}
                     />
                   </FormControl>
                   <FormMessage />

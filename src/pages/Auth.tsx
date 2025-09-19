@@ -84,7 +84,7 @@ export default function Auth() {
 
           {/* Right Side - Auth Form */}
           <div className="w-full">
-            <div className="glass-card p-8 rounded-2xl border border-primary/20 backdrop-blur-xl animate-fade-in">
+            <div className="glass-card p-8 rounded-2xl border border-primary/20 backdrop-blur-xl animate-fade-in pointer-events-auto z-20">
               <AuthForm mode={mode} onToggleMode={() => setMode(mode === 'login' ? 'signup' : 'login')} />
             </div>
           </div>
