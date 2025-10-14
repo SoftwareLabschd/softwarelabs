@@ -16,7 +16,6 @@ import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { LibraryInitializer } from "@/components/LibraryInitializer";
 
 const Index = () => {
   const { user } = useAuth();
@@ -34,7 +33,7 @@ const Index = () => {
         )}
       </div>
       
-      <LibraryInitializer />
+      
       <ThemeSelector />
       <MatrixBackground />
       <ParticleSystem />
