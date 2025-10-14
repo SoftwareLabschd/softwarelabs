@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Terminal, MessageSquare, Keyboard, Sparkles, ExternalLink } from "lucide-react";
+import { ProjectsSwiper } from "./ProjectsSwiper";
 
 const ProjectsSection = () => {
   const projects = [
@@ -95,6 +96,14 @@ const ProjectsSection = () => {
               </Card>
             );
           })}
+        </div>
+
+        {/* Featured Projects Swiper */}
+        <div className="mb-16">
+          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
+            Featured Projects
+          </h3>
+          <ProjectsSwiper />
         </div>
 
         <div className="text-center">

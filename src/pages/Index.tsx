@@ -16,6 +16,7 @@ import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { LibraryInitializer } from "@/components/LibraryInitializer";
 
 const Index = () => {
   const { user } = useAuth();
@@ -33,6 +34,7 @@ const Index = () => {
         )}
       </div>
       
+      <LibraryInitializer />
       <ThemeSelector />
       <MatrixBackground />
       <ParticleSystem />
@@ -40,13 +42,27 @@ const Index = () => {
       <EnhancedFloatingShapes />
       <div id="layer-effects" className="fixed inset-0 pointer-events-none z-[-25]" />
       <InteractiveEffects />
-      <Hero />
-      <AboutSection />
-      <ProjectsSection />
-      <InteractivePlanet />
-      <CyberCube />
-      <TeamSection />
-      <ContactSection />
+      <div data-aos="fade-up">
+        <Hero />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <AboutSection />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <ProjectsSection />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <InteractivePlanet />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <CyberCube />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="100">
+        <TeamSection />
+      </div>
+      <div data-aos="fade-up" data-aos-delay="200">
+        <ContactSection />
+      </div>
       <Footer />
     </div>
   );
