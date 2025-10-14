@@ -21,7 +21,6 @@ export default defineConfig(({ mode }) => ({
     dedupe: ["react", "react-dom"],
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react/jsx-runtime'],
-    force: true,
+    // Avoid prebundling React to prevent duplicate copies; dedupe handles it
   },
 }));
