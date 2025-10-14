@@ -14,6 +14,74 @@ export type Database = {
   }
   public: {
     Tables: {
+      channels: {
+        Row: {
+          created_by: string
+          id: number
+          inserted_at: string
+          slug: string
+        }
+        Insert: {
+          created_by: string
+          id?: number
+          inserted_at?: string
+          slug: string
+        }
+        Update: {
+          created_by?: string
+          id?: number
+          inserted_at?: string
+          slug?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "channels_created_by_fkey"
+            columns: ["created_by"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      messages: {
+        Row: {
+          channel_id: number
+          id: number
+          inserted_at: string
+          message: string | null
+          user_id: string
+        }
+        Insert: {
+          channel_id: number
+          id?: number
+          inserted_at?: string
+          message?: string | null
+          user_id: string
+        }
+        Update: {
+          channel_id?: number
+          id?: number
+          inserted_at?: string
+          message?: string | null
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "messages_channel_id_fkey"
+            columns: ["channel_id"]
+            isOneToOne: false
+            referencedRelation: "channels"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "messages_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       profiles: {
         Row: {
           avatar_url: string | null
@@ -44,15 +112,92 @@ export type Database = {
         }
         Relationships: []
       }
+      role_permissions: {
+        Row: {
+          id: number
+          permission: Database["public"]["Enums"]["app_permission"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Insert: {
+          id?: number
+          permission: Database["public"]["Enums"]["app_permission"]
+          role: Database["public"]["Enums"]["app_role"]
+        }
+        Update: {
+          id?: number
+          permission?: Database["public"]["Enums"]["app_permission"]
+          role?: Database["public"]["Enums"]["app_role"]
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          id: number
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          id?: number
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          id?: number
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "user_roles_user_id_fkey"
+            columns: ["user_id"]
+            isOneToOne: false
+            referencedRelation: "users"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      users: {
+        Row: {
+          id: string
+          status: Database["public"]["Enums"]["user_status"] | null
+          username: string | null
+        }
+        Insert: {
+          id: string
+          status?: Database["public"]["Enums"]["user_status"] | null
+          username?: string | null
+        }
+        Update: {
+          id?: string
+          status?: Database["public"]["Enums"]["user_status"] | null
+          username?: string | null
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      authorize: {
+        Args: {
+          requested_permission: Database["public"]["Enums"]["app_permission"]
+        }
+        Returns: boolean
+      }
+      create_user: {
+        Args: { email: string }
+        Returns: string
+      }
+      custom_access_token_hook: {
+        Args: { event: Json }
+        Returns: Json
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_permission: "channels.delete" | "messages.delete"
+      app_role: "admin" | "moderator"
+      user_status: "ONLINE" | "OFFLINE"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -179,6 +324,10 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_permission: ["channels.delete", "messages.delete"],
+      app_role: ["admin", "moderator"],
+      user_status: ["ONLINE", "OFFLINE"],
+    },
   },
 } as const
