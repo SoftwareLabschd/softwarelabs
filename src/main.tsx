@@ -9,8 +9,8 @@ createRoot(document.getElementById("root")!).render(
   </StrictMode>
 );
 
-// Register service worker for PWA functionality
-if ('serviceWorker' in navigator) {
+// Register service worker for PWA functionality (only in production)
+if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
       .register('/sw.js')
@@ -21,4 +21,12 @@ if ('serviceWorker' in navigator) {
         console.log('SW registration failed:', error);
       });
   });
+} else if (import.meta.env.DEV && 'serviceWorker' in navigator) {
+  // Ensure no stale service worker interferes during development
+  navigator.serviceWorker.getRegistrations().then((regs) => {
+    regs.forEach((reg) => reg.unregister());
+  });
+  if ('caches' in window) {
+    caches.keys().then((keys) => keys.forEach((k) => caches.delete(k)));
+  }
 }
