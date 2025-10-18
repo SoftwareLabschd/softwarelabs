@@ -26,10 +26,8 @@ const TeamSection = () => {
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Meet the Minds
-            </span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-color-rainbow">
+            Meet the Minds
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Young tech innovators pushing the boundaries of what's possible in software development

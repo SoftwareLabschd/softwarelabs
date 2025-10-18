@@ -32,10 +32,8 @@ const AboutSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                <span className="bg-gradient-primary bg-clip-text text-transparent">
-                  About SoftwareLabs
-                </span>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-color-cyber">
+                About SoftwareLabs
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
                 In an age defined by innovation and rapid digital evolution, ©SoftwareLabs stands 
@@ -78,22 +76,22 @@ const AboutSection = () => {
         {/* Mission Statement */}
         <div className="mt-20 text-center">
           <Card className="bg-gradient-card p-12 border-border/50 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 text-foreground">Our Mission</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 animate-color-sunset">Our Mission</h3>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               We create tools that push the boundaries of what browsers can simulate, 
               making technology education accessible, engaging, and entertaining for everyone.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div>
-                <h4 className="text-lg font-semibold text-tech-green mb-2">Educate</h4>
+                <h4 className="text-lg font-semibold mb-2 animate-color-matrix">Educate</h4>
                 <p className="text-muted-foreground">Through interactive learning experiences</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-cyber-purple mb-2">Entertain</h4>
+                <h4 className="text-lg font-semibold mb-2 animate-color-purple-pink">Entertain</h4>
                 <p className="text-muted-foreground">Through immersive simulations and illusions</p>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-neural-blue mb-2">Empower</h4>
+                <h4 className="text-lg font-semibold mb-2 animate-color-ocean">Empower</h4>
                 <p className="text-muted-foreground">Through exceptional UI experiences</p>
               </div>
             </div>

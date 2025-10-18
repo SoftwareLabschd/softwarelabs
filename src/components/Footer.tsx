@@ -7,8 +7,8 @@ const Footer = () => {
         <div className="text-center space-y-8">
           {/* Logo and Tagline */}
           <div>
-            <h3 className="text-3xl font-bold text-foreground mb-2">
-              <span className="text-tech-green">©</span>SoftwareLabs
+            <h3 className="text-3xl font-bold mb-2 animate-color-matrix">
+              ©SoftwareLabs
             </h3>
             <p className="text-muted-foreground">
               Fueling the Future with Code & Creativity
@@ -17,7 +17,7 @@ const Footer = () => {
 
           {/* Organizational Structure */}
           <div className="space-y-3">
-            <h4 className="text-lg font-semibold text-tech-green">Leadership</h4>
+            <h4 className="text-lg font-semibold animate-color-fire">Leadership</h4>
             <div className="space-y-2">
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - PARAS DHIMAN</p>
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - ARHAN SAHA</p>

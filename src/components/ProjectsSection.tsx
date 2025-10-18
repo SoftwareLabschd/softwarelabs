@@ -43,7 +43,7 @@ const ProjectsSection = () => {
     <section className="py-20 px-4 bg-secondary/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-cyber bg-clip-text text-transparent animate-glow" style={{ fontFamily: 'Exo 2, sans-serif' }}>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-color-fire" style={{ fontFamily: 'Exo 2, sans-serif' }}>
             Our Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
@@ -100,7 +100,7 @@ const ProjectsSection = () => {
 
         {/* Featured Projects Swiper */}
         <div className="mb-16">
-          <h3 className="text-3xl font-bold text-center mb-8 text-foreground">
+          <h3 className="text-3xl font-bold text-center mb-8 animate-color-gold-silver">
             Featured Projects
           </h3>
           <ProjectsSwiper />
