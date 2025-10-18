@@ -361,66 +361,66 @@ All colors MUST be HSL.
     50% { transform: scale(1.05); text-shadow: 0 0 20px currentColor; }
   }
 
-  /* Color Changing Animations for Headings */
+  /* Color Changing Animations for Headings - Enhanced & More Visible */
   @keyframes color-shift-rainbow {
-    0% { color: #00ff87; }
-    16.6% { color: #a855f7; }
-    33.2% { color: #00d9ff; }
-    49.8% { color: #ff6b35; }
-    66.4% { color: #ffa726; }
-    83% { color: #32d74b; }
-    100% { color: #00ff87; }
+    0% { color: #00ff87; text-shadow: 0 0 20px #00ff87, 0 0 40px #00ff87; }
+    16.6% { color: #a855f7; text-shadow: 0 0 20px #a855f7, 0 0 40px #a855f7; }
+    33.2% { color: #00d9ff; text-shadow: 0 0 20px #00d9ff, 0 0 40px #00d9ff; }
+    49.8% { color: #ff6b35; text-shadow: 0 0 20px #ff6b35, 0 0 40px #ff6b35; }
+    66.4% { color: #ffa726; text-shadow: 0 0 20px #ffa726, 0 0 40px #ffa726; }
+    83% { color: #32d74b; text-shadow: 0 0 20px #32d74b, 0 0 40px #32d74b; }
+    100% { color: #00ff87; text-shadow: 0 0 20px #00ff87, 0 0 40px #00ff87; }
   }
 
   @keyframes color-shift-neon {
-    0% { color: #00ff87; text-shadow: 0 0 10px #00ff87; }
-    50% { color: #ff3b30; text-shadow: 0 0 20px #ff3b30; }
-    100% { color: #00ff87; text-shadow: 0 0 10px #00ff87; }
+    0% { color: #00ff87; text-shadow: 0 0 30px #00ff87, 0 0 60px #00ff87; }
+    50% { color: #ff3b30; text-shadow: 0 0 30px #ff3b30, 0 0 60px #ff3b30; }
+    100% { color: #00ff87; text-shadow: 0 0 30px #00ff87, 0 0 60px #00ff87; }
   }
 
   @keyframes color-shift-cyber {
-    0% { color: #a855f7; text-shadow: 0 0 15px #a855f7; }
-    50% { color: #00d9ff; text-shadow: 0 0 25px #00d9ff; }
-    100% { color: #a855f7; text-shadow: 0 0 15px #a855f7; }
+    0% { color: #a855f7; text-shadow: 0 0 25px #a855f7, 0 0 50px #a855f7; }
+    50% { color: #00d9ff; text-shadow: 0 0 25px #00d9ff, 0 0 50px #00d9ff; }
+    100% { color: #a855f7; text-shadow: 0 0 25px #a855f7, 0 0 50px #a855f7; }
   }
 
   @keyframes color-shift-sunset {
-    0% { color: #ff6b35; }
-    33% { color: #ffa726; }
-    66% { color: #ff3b30; }
-    100% { color: #ff6b35; }
+    0% { color: #ff6b35; text-shadow: 0 0 25px #ff6b35, 0 0 50px #ff6b35; }
+    33% { color: #ffa726; text-shadow: 0 0 25px #ffa726, 0 0 50px #ffa726; }
+    66% { color: #ff3b30; text-shadow: 0 0 25px #ff3b30, 0 0 50px #ff3b30; }
+    100% { color: #ff6b35; text-shadow: 0 0 25px #ff6b35, 0 0 50px #ff6b35; }
   }
 
   @keyframes color-shift-ocean {
-    0% { color: #00d9ff; text-shadow: 0 0 12px #00d9ff; }
-    50% { color: #32d74b; text-shadow: 0 0 18px #32d74b; }
-    100% { color: #00d9ff; text-shadow: 0 0 12px #00d9ff; }
+    0% { color: #00d9ff; text-shadow: 0 0 25px #00d9ff, 0 0 50px #00d9ff; }
+    50% { color: #32d74b; text-shadow: 0 0 25px #32d74b, 0 0 50px #32d74b; }
+    100% { color: #00d9ff; text-shadow: 0 0 25px #00d9ff, 0 0 50px #00d9ff; }
   }
 
   @keyframes color-shift-fire {
-    0% { color: #ff3b30; text-shadow: 0 0 20px #ff3b30; }
-    25% { color: #ff6b35; text-shadow: 0 0 25px #ff6b35; }
-    50% { color: #ffa726; text-shadow: 0 0 30px #ffa726; }
-    75% { color: #ff6b35; text-shadow: 0 0 25px #ff6b35; }
-    100% { color: #ff3b30; text-shadow: 0 0 20px #ff3b30; }
+    0% { color: #ff3b30; text-shadow: 0 0 30px #ff3b30, 0 0 60px #ff3b30; }
+    25% { color: #ff6b35; text-shadow: 0 0 30px #ff6b35, 0 0 60px #ff6b35; }
+    50% { color: #ffa726; text-shadow: 0 0 30px #ffa726, 0 0 60px #ffa726; }
+    75% { color: #ff6b35; text-shadow: 0 0 30px #ff6b35, 0 0 60px #ff6b35; }
+    100% { color: #ff3b30; text-shadow: 0 0 30px #ff3b30, 0 0 60px #ff3b30; }
   }
 
   @keyframes color-shift-matrix {
-    0% { color: #00ff41; text-shadow: 0 0 15px #00ff41; }
-    50% { color: #32d74b; text-shadow: 0 0 20px #32d74b; }
-    100% { color: #00ff41; text-shadow: 0 0 15px #00ff41; }
+    0% { color: #00ff41; text-shadow: 0 0 25px #00ff41, 0 0 50px #00ff41; }
+    50% { color: #32d74b; text-shadow: 0 0 25px #32d74b, 0 0 50px #32d74b; }
+    100% { color: #00ff41; text-shadow: 0 0 25px #00ff41, 0 0 50px #00ff41; }
   }
 
   @keyframes color-shift-purple-pink {
-    0% { color: #a855f7; }
-    50% { color: #ff6bb5; }
-    100% { color: #a855f7; }
+    0% { color: #a855f7; text-shadow: 0 0 25px #a855f7, 0 0 50px #a855f7; }
+    50% { color: #ff6bb5; text-shadow: 0 0 25px #ff6bb5, 0 0 50px #ff6bb5; }
+    100% { color: #a855f7; text-shadow: 0 0 25px #a855f7, 0 0 50px #a855f7; }
   }
 
   @keyframes color-shift-gold-silver {
-    0% { color: #ffd700; text-shadow: 0 0 15px #ffd700; }
-    50% { color: #c0c0c0; text-shadow: 0 0 20px #c0c0c0; }
-    100% { color: #ffd700; text-shadow: 0 0 15px #ffd700; }
+    0% { color: #ffd700; text-shadow: 0 0 25px #ffd700, 0 0 50px #ffd700; }
+    50% { color: #c0c0c0; text-shadow: 0 0 25px #c0c0c0, 0 0 50px #c0c0c0; }
+    100% { color: #ffd700; text-shadow: 0 0 25px #ffd700, 0 0 50px #ffd700; }
   }
 
   @keyframes shimmer {
@@ -497,41 +497,41 @@ All colors MUST be HSL.
     animation: pulse-glow 2s infinite;
   }
 
-  /* Color Change Animation Classes */
+  /* Color Change Animation Classes - Faster & More Vibrant */
   .animate-color-rainbow {
-    animation: color-shift-rainbow 6s ease-in-out infinite;
+    animation: color-shift-rainbow 4s ease-in-out infinite;
   }
 
   .animate-color-neon {
-    animation: color-shift-neon 3s ease-in-out infinite;
+    animation: color-shift-neon 2s ease-in-out infinite;
   }
 
   .animate-color-cyber {
-    animation: color-shift-cyber 4s ease-in-out infinite;
+    animation: color-shift-cyber 2.5s ease-in-out infinite;
   }
 
   .animate-color-sunset {
-    animation: color-shift-sunset 5s ease-in-out infinite;
+    animation: color-shift-sunset 3s ease-in-out infinite;
   }
 
   .animate-color-ocean {
-    animation: color-shift-ocean 3.5s ease-in-out infinite;
+    animation: color-shift-ocean 2.5s ease-in-out infinite;
   }
 
   .animate-color-fire {
-    animation: color-shift-fire 4s ease-in-out infinite;
+    animation: color-shift-fire 2.5s ease-in-out infinite;
   }
 
   .animate-color-matrix {
-    animation: color-shift-matrix 2.5s ease-in-out infinite;
+    animation: color-shift-matrix 2s ease-in-out infinite;
   }
 
   .animate-color-purple-pink {
-    animation: color-shift-purple-pink 4s ease-in-out infinite;
+    animation: color-shift-purple-pink 3s ease-in-out infinite;
   }
 
   .animate-color-gold-silver {
-    animation: color-shift-gold-silver 3s ease-in-out infinite;
+    animation: color-shift-gold-silver 2.5s ease-in-out infinite;
   }
 
   .animate-shimmer {
