@@ -7,17 +7,17 @@ const Footer = () => {
         <div className="text-center space-y-8">
           {/* Logo and Tagline */}
           <div>
-            <h3 className="text-3xl font-bold mb-2 animate-color-matrix">
+            <h3 className="text-3xl font-bold mb-2 animate-gradient-shift">
               ©SoftwareLabs
             </h3>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground animate-gradient-shift">
               Fueling the Future with Code & Creativity
             </p>
           </div>
 
           {/* Organizational Structure */}
           <div className="space-y-3">
-            <h4 className="text-lg font-semibold animate-color-fire">Leadership</h4>
+            <h4 className="text-lg font-semibold animate-gradient-shift">Leadership</h4>
             <div className="space-y-2">
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - PARAS DHIMAN</p>
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - ARHAN SAHA</p>

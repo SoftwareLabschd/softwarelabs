@@ -26,7 +26,7 @@ const TeamSection = () => {
     <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-color-rainbow">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-gradient-shift">
             Meet the Minds
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

@@ -6,7 +6,7 @@ const ContactSection = () => {
   return (
     <section className="py-20 px-4 bg-secondary/30">
       <div className="max-w-4xl mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-color-neon">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-gradient-shift">
           Get in Touch
         </h2>
         <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -20,7 +20,7 @@ const ContactSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-tech-green/20 flex items-center justify-center">
                 <Globe className="w-8 h-8 text-tech-green" />
               </div>
-              <h3 className="text-xl font-bold mb-4 animate-color-ocean">Visit Our Website</h3>
+              <h3 className="text-xl font-bold mb-4 animate-gradient-shift">Visit Our Website</h3>
               <p className="text-muted-foreground mb-6">
                 Explore our complete portfolio and interactive projects
               </p>
@@ -36,7 +36,7 @@ const ContactSection = () => {
               <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-cyber-purple/20 flex items-center justify-center">
                 <Mail className="w-8 h-8 text-cyber-purple" />
               </div>
-              <h3 className="text-xl font-bold mb-4 animate-color-cyber">Direct Contact</h3>
+              <h3 className="text-xl font-bold mb-4 animate-gradient-shift">Direct Contact</h3>
               <p className="text-muted-foreground mb-6">
                 Reach out to our founder directly for collaborations
               </p>
@@ -53,7 +53,7 @@ const ContactSection = () => {
 
         <Card className="bg-gradient-card p-8 border-border/50">
           <div className="text-center max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold mb-4 animate-color-purple-pink">Let's Build the Future Together</h3>
+            <h3 className="text-2xl font-bold mb-4 animate-gradient-shift">Let's Build the Future Together</h3>
             <p className="text-muted-foreground mb-6">
               Whether you're interested in our projects, want to collaborate, or have ideas to share, 
               we're always excited to connect with fellow innovators and tech enthusiasts.

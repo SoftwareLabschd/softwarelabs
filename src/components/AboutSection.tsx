@@ -32,7 +32,7 @@ const AboutSection = () => {
           {/* Left Content */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-color-cyber">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-gradient-shift">
                 About SoftwareLabs
               </h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-6">
@@ -76,7 +76,7 @@ const AboutSection = () => {
         {/* Mission Statement */}
         <div className="mt-20 text-center">
           <Card className="bg-gradient-card p-12 border-border/50 max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 animate-color-sunset">Our Mission</h3>
+            <h3 className="text-2xl md:text-3xl font-bold mb-6 animate-gradient-shift">Our Mission</h3>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               We create tools that push the boundaries of what browsers can simulate, 
               making technology education accessible, engaging, and entertaining for everyone.
