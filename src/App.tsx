@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import { AuthProvider } from "@/contexts/AuthContext";
+import { LibraryInitializer } from "@/components/LibraryInitializer";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import NotFound from "./pages/NotFound";
@@ -16,6 +17,7 @@ const App = () => (
     <ThemeProvider>
       <AuthProvider>
         <TooltipProvider>
+          <LibraryInitializer />
           <Toaster />
           <Sonner />
           <BrowserRouter>
