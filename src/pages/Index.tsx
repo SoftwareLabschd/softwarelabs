@@ -41,28 +41,30 @@ const Index = () => {
       <EnhancedFloatingShapes />
       <div id="layer-effects" className="fixed inset-0 pointer-events-none z-[-25]" />
       <InteractiveEffects />
-      <div data-aos="fade-up">
+      <div className="relative z-10" data-aos="fade-up">
         <Hero />
       </div>
-      <div data-aos="fade-up" data-aos-delay="100">
+      <div className="relative z-10" data-aos="fade-up" data-aos-delay="100">
         <AboutSection />
       </div>
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div className="relative z-10" data-aos="fade-up" data-aos-delay="200">
         <ProjectsSection />
       </div>
-      <div data-aos="fade-up" data-aos-delay="100">
+      <div className="relative z-10" data-aos="fade-up" data-aos-delay="100">
         <InteractivePlanet />
       </div>
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div className="relative z-10" data-aos="fade-up" data-aos-delay="200">
         <CyberCube />
       </div>
-      <div data-aos="fade-up" data-aos-delay="100">
+      <div className="relative z-10" data-aos="fade-up" data-aos-delay="100">
         <TeamSection />
       </div>
-      <div data-aos="fade-up" data-aos-delay="200">
+      <div className="relative z-10" data-aos="fade-up" data-aos-delay="200">
         <ContactSection />
       </div>
-      <Footer />
+      <div className="relative z-10">
+        <Footer />
+      </div>
     </div>
   );
 };
