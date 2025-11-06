@@ -185,14 +185,8 @@ export type Database = {
         }
         Returns: boolean
       }
-      create_user: {
-        Args: { email: string }
-        Returns: string
-      }
-      custom_access_token_hook: {
-        Args: { event: Json }
-        Returns: Json
-      }
+      create_user: { Args: { email: string }; Returns: string }
+      custom_access_token_hook: { Args: { event: Json }; Returns: Json }
       has_role: {
         Args: {
           _role: Database["public"]["Enums"]["app_role"]
