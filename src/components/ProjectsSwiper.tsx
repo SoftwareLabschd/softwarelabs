@@ -1,13 +1,14 @@
-import { useEffect, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
-
-declare global {
-  interface Window {
-    Swiper: any;
-  }
-}
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
 
 const projects = [
   {
@@ -53,120 +54,65 @@ const projects = [
 ];
 
 export const ProjectsSwiper = () => {
-  const swiperRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const initSwiper = () => {
-      if (window.Swiper && swiperRef.current) {
-        new window.Swiper('.projects-swiper', {
-          slidesPerView: 1,
-          spaceBetween: 30,
-          loop: true,
-          autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-          },
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-          breakpoints: {
-            640: {
-              slidesPerView: 1,
-              spaceBetween: 20,
-            },
-            768: {
-              slidesPerView: 2,
-              spaceBetween: 30,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-            },
-          },
-        });
-      } else {
-        setTimeout(initSwiper, 100);
-      }
-    };
-
-    initSwiper();
-  }, []);
-
   return (
-    <div className="relative" ref={swiperRef}>
-      <div className="swiper projects-swiper">
-        <div className="swiper-wrapper">
-          {projects.map((project, index) => (
-            <div key={index} className="swiper-slide">
-              <Card className="h-full bg-background/80 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300">
-                <CardHeader>
-                  <div className={`h-2 w-full rounded-t-lg bg-gradient-to-r ${project.gradient} mb-4`} />
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <CardDescription className="text-base">
-                    {project.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {project.tags.map((tag, tagIndex) => (
-                      <Badge 
-                        key={tagIndex} 
-                        variant="secondary"
-                        className="bg-primary/10 text-primary"
-                      >
-                        {tag}
-                      </Badge>
-                    ))}
-                  </div>
-                  <div className="flex gap-4">
-                    <a
-                      href={project.github}
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+    <Carousel
+      opts={{
+        align: "start",
+        loop: true,
+      }}
+      plugins={[
+        Autoplay({
+          delay: 3500,
+        }),
+      ]}
+      className="w-full"
+    >
+      <CarouselContent>
+        {projects.map((project, index) => (
+          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+            <Card className="h-full bg-background/80 backdrop-blur-sm border-primary/20 hover:border-primary/50 transition-all duration-300">
+              <CardHeader>
+                <div className={`h-2 w-full rounded-t-lg bg-gradient-to-r ${project.gradient} mb-4`} />
+                <CardTitle className="text-xl">{project.title}</CardTitle>
+                <CardDescription className="text-base">
+                  {project.description}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.tags.map((tag, tagIndex) => (
+                    <Badge 
+                      key={tagIndex} 
+                      variant="secondary"
+                      className="bg-primary/10 text-primary"
                     >
-                      <Github className="w-4 h-4" />
-                      Code
-                    </a>
-                    <a
-                      href={project.demo}
-                      className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                      Demo
-                    </a>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          ))}
-        </div>
-        
-        {/* Navigation */}
-        <div className="swiper-button-next text-primary"></div>
-        <div className="swiper-button-prev text-primary"></div>
-        
-        {/* Pagination */}
-        <div className="swiper-pagination mt-8"></div>
-      </div>
-
-      <style>{`
-        .swiper-button-next,
-        .swiper-button-prev {
-          color: hsl(var(--primary));
-        }
-        
-        .swiper-pagination-bullet {
-          background: hsl(var(--primary));
-        }
-        
-        .swiper-pagination-bullet-active {
-          background: hsl(var(--primary));
-        }
-      `}</style>
-    </div>
+                      {tag}
+                    </Badge>
+                  ))}
+                </div>
+                <div className="flex gap-4">
+                  <a
+                    href={project.github}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <Github className="w-4 h-4" />
+                    Code
+                  </a>
+                  <a
+                    href={project.demo}
+                    className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                    Demo
+                  </a>
+                </div>
+              </CardContent>
+            </Card>
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <CarouselPrevious className="text-primary border-primary/50 hover:bg-primary/10" />
+      <CarouselNext className="text-primary border-primary/50 hover:bg-primary/10" />
+    </Carousel>
   );
 };
