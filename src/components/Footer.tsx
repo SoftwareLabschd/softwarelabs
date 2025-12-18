@@ -1,6 +1,37 @@
-import { Heart, Code, ExternalLink, Mail } from "lucide-react";
+import { Heart, Code, ExternalLink, Mail, Send } from "lucide-react";
+import { useState } from "react";
+import { toast } from "@/hooks/use-toast";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email || !email.includes("@")) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    
+    // Simulate API call - replace with actual newsletter service
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    toast({
+      title: "Subscribed!",
+      description: "Thank you for subscribing to our newsletter.",
+    });
+    setEmail("");
+    setIsLoading(false);
+  };
+
   return (
     <footer className="bg-background border-t border-border/50 py-12 px-4">
       <div className="max-w-7xl mx-auto">
@@ -22,6 +53,37 @@ const Footer = () => {
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - PARAS DHIMAN</p>
               <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - ARHAN SAHA</p>
             </div>
+          </div>
+
+          {/* Newsletter Subscription */}
+          <div className="bg-secondary/30 rounded-xl p-6 max-w-md mx-auto border border-border/50">
+            <h4 className="text-lg font-semibold mb-2 animate-gradient-shift">
+              Subscribe to Our Newsletter
+            </h4>
+            <p className="text-muted-foreground text-sm mb-4">
+              Get the latest updates, tips, and news from SoftwareLabs.
+            </p>
+            <form onSubmit={handleNewsletterSubmit} className="flex gap-2">
+              <Input
+                type="email"
+                placeholder="softwarelabs.lovable.app"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="flex-1 bg-background/50 border-border/50"
+                disabled={isLoading}
+              />
+              <Button 
+                type="submit" 
+                disabled={isLoading}
+                className="bg-tech-green hover:bg-tech-green/80 text-background"
+              >
+                {isLoading ? (
+                  <span className="animate-spin">⏳</span>
+                ) : (
+                  <Send className="w-4 h-4" />
+                )}
+              </Button>
+            </form>
           </div>
 
           {/* Divider */}
