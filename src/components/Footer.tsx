@@ -78,6 +78,22 @@ const Footer = () => {
             <span className="px-2 py-1 bg-secondary rounded">HTML/CSS</span>
             <span className="px-2 py-1 bg-secondary rounded">UI/UX</span>
           </div>
+
+          {/* Made in India */}
+          <div className="pt-5">
+            <div className="text-center pt-3">
+              <span className="text-muted-foreground">
+                Made with <i className="fa fa-heart text-red-500"></i> love in India
+              </span>
+            </div>
+          </div>
+
+          {/* Copyright Footer Note */}
+          <p className="text-center text-muted-foreground border-b border-border pb-3">
+            <small>
+              All Information is Copyrighted By SoftwareLabs | ©️SoftwareLabs | Paras | Arhan
+            </small>
+          </p>
         </div>
       </div>
     </footer>
