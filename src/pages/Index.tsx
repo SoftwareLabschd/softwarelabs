@@ -14,6 +14,7 @@ import ParticleSystem from "@/components/ParticleSystem";
 import InteractivePlanet from "@/components/InteractivePlanet";
 import ThemeSelector from "@/components/ThemeSelector";
 import Preloader from "@/components/Preloader";
+import StickyNav from "@/components/StickyNav";
 import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
@@ -29,7 +30,10 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background relative animate-fade-in">
-      {/* Header with Auth/Profile */}
+      {/* Sticky Navigation */}
+      <StickyNav />
+      
+      {/* Initial Header with Auth/Profile (visible before scroll) */}
       <div className="fixed top-4 left-4 z-50">
         {user ? (
           <ProfileAvatar />
@@ -40,7 +44,6 @@ const Index = () => {
         )}
       </div>
       
-      
       <ThemeSelector />
       <MatrixBackground />
       <ParticleSystem />
@@ -48,13 +51,14 @@ const Index = () => {
       <EnhancedFloatingShapes />
       <div id="layer-effects" className="fixed inset-0 pointer-events-none z-[-25]" />
       <InteractiveEffects />
-      <div className="relative z-10">
+      
+      <div id="hero" className="relative z-10">
         <Hero />
       </div>
-      <div className="relative z-10">
+      <div id="about" className="relative z-10">
         <AboutSection />
       </div>
-      <div className="relative z-10">
+      <div id="projects" className="relative z-10">
         <ProjectsSection />
       </div>
       <div className="relative z-10">
@@ -63,10 +67,10 @@ const Index = () => {
       <div className="relative z-10">
         <CyberCube />
       </div>
-      <div className="relative z-10">
+      <div id="team" className="relative z-10">
         <TeamSection />
       </div>
-      <div className="relative z-10">
+      <div id="contact" className="relative z-10">
         <ContactSection />
       </div>
       <div className="relative z-10">
