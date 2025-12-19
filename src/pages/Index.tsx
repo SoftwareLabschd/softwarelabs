@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Hero from "@/components/Hero";
 import AboutSection from "@/components/AboutSection";
 import TeamSection from "@/components/TeamSection";
@@ -12,6 +13,7 @@ import CyberCube from "@/components/CyberCube";
 import ParticleSystem from "@/components/ParticleSystem";
 import InteractivePlanet from "@/components/InteractivePlanet";
 import ThemeSelector from "@/components/ThemeSelector";
+import Preloader from "@/components/Preloader";
 import { ProfileAvatar } from "@/components/ProfileAvatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { Button } from "@/components/ui/button";
@@ -19,9 +21,14 @@ import { Link } from "react-router-dom";
 
 const Index = () => {
   const { user } = useAuth();
+  const [isLoading, setIsLoading] = useState(true);
+
+  if (isLoading) {
+    return <Preloader onComplete={() => setIsLoading(false)} />;
+  }
 
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="min-h-screen bg-background relative animate-fade-in">
       {/* Header with Auth/Profile */}
       <div className="fixed top-4 left-4 z-50">
         {user ? (
