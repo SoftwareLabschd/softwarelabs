@@ -2,8 +2,67 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Terminal, MessageSquare, Keyboard, Sparkles, ExternalLink } from "lucide-react";
 import { ProjectsSwiper } from "./ProjectsSwiper";
+import { useEffect, useRef } from "react";
 
 const ProjectsSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!window.gsap || !window.ScrollTrigger) return;
+
+    const gsap = window.gsap;
+    const ScrollTrigger = window.ScrollTrigger;
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animate section title
+    const title = sectionRef.current?.querySelector('h2');
+    const subtitle = sectionRef.current?.querySelector('p');
+    
+    if (title) {
+      gsap.fromTo(title, 
+        { opacity: 0, y: 50, scale: 0.9 },
+        { 
+          opacity: 1, y: 0, scale: 1, duration: 1, ease: "power3.out",
+          scrollTrigger: { trigger: title, start: "top 85%", once: true }
+        }
+      );
+    }
+
+    if (subtitle) {
+      gsap.fromTo(subtitle,
+        { opacity: 0, y: 30 },
+        { 
+          opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power2.out",
+          scrollTrigger: { trigger: subtitle, start: "top 85%", once: true }
+        }
+      );
+    }
+
+    // Animate project cards with stagger
+    const cards = cardsRef.current?.querySelectorAll('.project-card');
+    if (cards && cards.length > 0) {
+      gsap.fromTo(cards,
+        { opacity: 0, y: 80, scale: 0.9, rotateX: 10 },
+        {
+          opacity: 1, y: 0, scale: 1, rotateX: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: cardsRef.current,
+            start: "top 80%",
+            once: true
+          }
+        }
+      );
+    }
+
+    return () => {
+      ScrollTrigger.getAll().forEach((t: any) => t.kill());
+    };
+  }, []);
+
   const projects = [
     {
       title: "Fake Terminal Simulators",
@@ -40,7 +99,7 @@ const ProjectsSection = () => {
   ];
 
   return (
-    <section className="py-20 px-4 bg-secondary/30">
+    <section ref={sectionRef} className="py-20 px-4 bg-secondary/30 relative">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-gradient-shift" style={{ fontFamily: 'Exo 2, sans-serif' }}>
@@ -52,14 +111,14 @@ const ProjectsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
+        <div ref={cardsRef} className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-16">
           {projects.map((project, index) => {
             const IconComponent = project.icon;
             return (
               <Card key={project.title} className={`
-                glass-strong p-8 hover-lift animate-spring-in stagger-${index + 1}
+                project-card glass-strong p-8 hover-lift
                 transition-all duration-500 hover:border-cyan-400/40 group
-              `} data-aos="fade-up" data-aos-delay={index * 100}>
+              `}>
                 <div className="flex items-start space-x-4 mb-6">
                   <div className="
                     w-12 h-12 rounded-lg bg-gradient-neon flex items-center justify-center 

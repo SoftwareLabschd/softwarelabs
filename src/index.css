@@ -724,6 +724,23 @@ All colors MUST be HSL.
     100% { transform: rotate(360deg) scale(1); }
   }
 
+  @keyframes fall {
+    0% { 
+      transform: translateY(-100px) rotate(0deg);
+      opacity: 0;
+    }
+    10% {
+      opacity: 0.3;
+    }
+    90% {
+      opacity: 0.3;
+    }
+    100% { 
+      transform: translateY(100vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
   /* Enhanced Utility Classes */
   .animate-glow { animation: glow 2s ease-in-out infinite alternate; }
   .animate-float { animation: float 6s ease-in-out infinite; }
@@ -736,6 +753,7 @@ All colors MUST be HSL.
   .animate-spring-in { animation: spring-in var(--spring-common-duration) var(--spring-common) forwards; }
   .animate-spring-bounce { animation: spring-bounce var(--spring-bounce-duration) var(--spring-bounce); }
   .animate-elastic-in { animation: elastic-in 0.6s var(--easing-common) forwards; }
+  .animate-fall { animation: fall 12s linear infinite; }
 
   /* Advanced Effects */
   .backdrop-blur-xs { backdrop-filter: blur(var(--blur-xs)); }
