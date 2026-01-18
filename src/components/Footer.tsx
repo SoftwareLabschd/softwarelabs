@@ -1,4 +1,3 @@
-import { Heart, Code, ExternalLink, Mail, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -39,25 +38,95 @@ const Footer = () => {
           {/* Logo and Tagline */}
           <div>
             <h3 className="text-3xl font-bold mb-2 animate-gradient-shift">
+              <i className="fa-solid fa-code text-tech-green mr-2"></i>
               ©SoftwareLabs
             </h3>
             <p className="text-muted-foreground animate-gradient-shift">
+              <i className="fa-solid fa-rocket text-cyber-purple mr-2"></i>
               Fueling the Future with Code & Creativity
             </p>
           </div>
 
+          {/* Social Links */}
+          <div className="flex justify-center gap-4">
+            <a 
+              href="https://github.com/softwarelabs" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-tech-green/20 hover:text-tech-green transition-all duration-300 hover:scale-110"
+              aria-label="GitHub"
+            >
+              <i className="fa-brands fa-github text-xl"></i>
+            </a>
+            <a 
+              href="https://twitter.com/softwarelabs" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-neural-blue/20 hover:text-neural-blue transition-all duration-300 hover:scale-110"
+              aria-label="Twitter"
+            >
+              <i className="fa-brands fa-x-twitter text-xl"></i>
+            </a>
+            <a 
+              href="https://linkedin.com/company/softwarelabs" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-blue-500/20 hover:text-blue-500 transition-all duration-300 hover:scale-110"
+              aria-label="LinkedIn"
+            >
+              <i className="fa-brands fa-linkedin-in text-xl"></i>
+            </a>
+            <a 
+              href="https://instagram.com/softwarelabs" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-pink-500/20 hover:text-pink-500 transition-all duration-300 hover:scale-110"
+              aria-label="Instagram"
+            >
+              <i className="fa-brands fa-instagram text-xl"></i>
+            </a>
+            <a 
+              href="https://youtube.com/@softwarelabs" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-red-500/20 hover:text-red-500 transition-all duration-300 hover:scale-110"
+              aria-label="YouTube"
+            >
+              <i className="fa-brands fa-youtube text-xl"></i>
+            </a>
+            <a 
+              href="https://discord.gg/softwarelabs" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-indigo-500/20 hover:text-indigo-500 transition-all duration-300 hover:scale-110"
+              aria-label="Discord"
+            >
+              <i className="fa-brands fa-discord text-xl"></i>
+            </a>
+          </div>
+
           {/* Organizational Structure */}
           <div className="space-y-3">
-            <h4 className="text-lg font-semibold animate-gradient-shift">Leadership</h4>
+            <h4 className="text-lg font-semibold animate-gradient-shift">
+              <i className="fa-solid fa-users-gear text-tech-green mr-2"></i>
+              Leadership
+            </h4>
             <div className="space-y-2">
-              <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - PARAS DHIMAN</p>
-              <p className="text-foreground font-medium">FOUNDER/CHAIRPERSON - ARHAN SAHA</p>
+              <p className="text-foreground font-medium">
+                <i className="fa-solid fa-user-tie text-cyber-purple mr-2"></i>
+                FOUNDER/CHAIRPERSON - PARAS DHIMAN
+              </p>
+              <p className="text-foreground font-medium">
+                <i className="fa-solid fa-user-tie text-cyber-purple mr-2"></i>
+                FOUNDER/CHAIRPERSON - ARHAN SAHA
+              </p>
             </div>
           </div>
 
           {/* Newsletter Subscription */}
           <div className="bg-secondary/30 rounded-xl p-6 max-w-md mx-auto border border-border/50">
             <h4 className="text-lg font-semibold mb-2 animate-gradient-shift">
+              <i className="fa-solid fa-envelope-open-text text-tech-green mr-2"></i>
               Subscribe to Our Newsletter
             </h4>
             <p className="text-muted-foreground text-sm mb-4">
@@ -78,9 +147,9 @@ const Footer = () => {
                 className="bg-tech-green hover:bg-tech-green/80 text-background"
               >
                 {isLoading ? (
-                  <span className="animate-spin">⏳</span>
+                  <i className="fa-solid fa-spinner fa-spin"></i>
                 ) : (
-                  <Send className="w-4 h-4" />
+                  <i className="fa-solid fa-paper-plane"></i>
                 )}
               </Button>
             </form>
@@ -97,55 +166,81 @@ const Footer = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-tech-green hover:text-tech-green/80 transition-colors"
             >
-              <ExternalLink className="w-4 h-4" />
+              <i className="fa-solid fa-globe"></i>
               softwarelabs.lovable.app
             </a>
             <a 
               href="mailto:softwarelabschd@gmail.com"
               className="flex items-center gap-2 text-cyber-purple hover:text-cyber-purple/80 transition-colors"
             >
-              <Mail className="w-4 h-4" />
+              <i className="fa-solid fa-envelope"></i>
               softwarelabschd@gmail.com
             </a>
           </div>
 
           {/* Copyright and Restrictions */}
           <div className="space-y-4">
-            <p className="text-foreground font-medium">BY-PARAS DHIMAN & ARHAN SAHA</p>
+            <p className="text-foreground font-medium">
+              <i className="fa-solid fa-pen-nib text-tech-green mr-2"></i>
+              BY-PARAS DHIMAN & ARHAN SAHA
+            </p>
             
             <div className="text-sm text-muted-foreground space-y-2 max-w-2xl mx-auto">
-              <p className="font-semibold">You are NOT allowed to:</p>
+              <p className="font-semibold">
+                <i className="fa-solid fa-ban text-red-500 mr-2"></i>
+                You are NOT allowed to:
+              </p>
               <ul className="space-y-1 text-left">
-                <li>• Sell, redistribute, or modify this software without written permission from SoftwareLabs.</li>
-                <li>• Claim authorship or remove credits from the software.</li>
+                <li><i className="fa-solid fa-xmark text-red-500 mr-2"></i>Sell, redistribute, or modify this software without written permission from SoftwareLabs.</li>
+                <li><i className="fa-solid fa-xmark text-red-500 mr-2"></i>Claim authorship or remove credits from the software.</li>
               </ul>
             </div>
 
             <p className="text-muted-foreground flex items-center justify-center gap-2 flex-wrap">
-              <span>©SoftwareLabs – All Rights Reserved</span>
+              <span><i className="fa-solid fa-copyright mr-1"></i>SoftwareLabs – All Rights Reserved</span>
               <span className="hidden sm:inline">|</span>
               <span className="flex items-center gap-1">
                 Made with 
-                <Heart className="w-4 h-4 text-red-500 fill-current" />
+                <i className="fa-solid fa-heart text-red-500 animate-pulse"></i>
                 &
-                <Code className="w-4 h-4 text-tech-green" />
+                <i className="fa-solid fa-code text-tech-green"></i>
               </span>
             </p>
           </div>
 
           {/* Tech Stack */}
-          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground">
-            <span className="px-2 py-1 bg-secondary rounded">Python</span>
-            <span className="px-2 py-1 bg-secondary rounded">JavaScript</span>
-            <span className="px-2 py-1 bg-secondary rounded">HTML/CSS</span>
-            <span className="px-2 py-1 bg-secondary rounded">UI/UX</span>
+          <div className="flex items-center justify-center gap-4 text-sm text-muted-foreground flex-wrap">
+            <span className="px-3 py-1.5 bg-secondary rounded-full flex items-center gap-2">
+              <i className="fa-brands fa-python text-yellow-400"></i>
+              Python
+            </span>
+            <span className="px-3 py-1.5 bg-secondary rounded-full flex items-center gap-2">
+              <i className="fa-brands fa-js text-yellow-300"></i>
+              JavaScript
+            </span>
+            <span className="px-3 py-1.5 bg-secondary rounded-full flex items-center gap-2">
+              <i className="fa-brands fa-html5 text-orange-500"></i>
+              HTML/CSS
+            </span>
+            <span className="px-3 py-1.5 bg-secondary rounded-full flex items-center gap-2">
+              <i className="fa-solid fa-wand-magic-sparkles text-cyber-purple"></i>
+              UI/UX
+            </span>
+            <span className="px-3 py-1.5 bg-secondary rounded-full flex items-center gap-2">
+              <i className="fa-brands fa-react text-cyan-400"></i>
+              React
+            </span>
           </div>
 
           {/* Made in India */}
           <div className="pt-5">
             <div className="text-center pt-3">
               <span className="text-muted-foreground">
-                Made with <i className="fa fa-heart text-red-500"></i> love in India
+                Made with <i className="fa-solid fa-heart text-red-500"></i> love in 
+                <span className="ml-1 inline-flex items-center">
+                  <i className="fa-solid fa-flag text-orange-500"></i>
+                  <span className="ml-1 font-semibold text-foreground">India</span>
+                </span>
               </span>
             </div>
           </div>
@@ -153,6 +248,7 @@ const Footer = () => {
           {/* Copyright Footer Note */}
           <p className="text-center text-muted-foreground border-b border-border pb-3">
             <small>
+              <i className="fa-solid fa-shield-halved text-tech-green mr-2"></i>
               All Information is Copyrighted By SoftwareLabs | ©️SoftwareLabs | Paras | Arhan
             </small>
           </p>

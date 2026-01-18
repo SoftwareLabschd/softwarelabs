@@ -7,32 +7,78 @@
   "background_color": "#0A0F1E",
   "theme_color": "#6366F1",
   "orientation": "portrait-primary",
+  "id": "/",
+  "scope": "/",
   "icons": [
     {
-      "src": "/favicon.ico",
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
       "sizes": "48x48",
-      "type": "image/x-icon",
+      "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/placeholder.svg",
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
+      "sizes": "72x72",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
+      "sizes": "96x96",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/placeholder.svg",
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
-  "categories": ["education", "development", "technology"],
+  "categories": ["education", "development", "technology", "productivity"],
   "screenshots": [
     {
       "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/social-images/social-1757746603498-softwarelabs2.png",
       "sizes": "1200x630",
-      "type": "image/png"
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "SoftwareLabs Homepage"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Projects",
+      "short_name": "Projects",
+      "description": "View our innovative projects",
+      "url": "/#projects",
+      "icons": [{ "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Contact",
+      "short_name": "Contact",
+      "description": "Get in touch with us",
+      "url": "/#contact",
+      "icons": [{ "src": "https://storage.googleapis.com/gpt-engineer-file-uploads/spXYxfHil7XwwnqrLm7ykYdhEGm2/uploads/1759840010946-softwarelabs2.png", "sizes": "96x96" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }
