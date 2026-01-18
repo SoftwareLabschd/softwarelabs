@@ -57,28 +57,28 @@ const ContactSection = () => {
         {/* Social Connect Cards */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
           <Card className="bg-gradient-card p-4 border-border/50 hover:border-foreground/30 transition-all duration-300 group cursor-pointer">
-            <a href="https://github.com/softwarelabs" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <i className="fa-brands fa-github text-3xl mb-2 group-hover:text-foreground transition-colors"></i>
               <span className="text-sm text-muted-foreground group-hover:text-foreground transition-colors">GitHub</span>
-            </a>
+            </div>
           </Card>
           <Card className="bg-gradient-card p-4 border-border/50 hover:border-neural-blue/50 transition-all duration-300 group cursor-pointer">
-            <a href="https://twitter.com/softwarelabs" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <i className="fa-brands fa-x-twitter text-3xl mb-2 group-hover:text-neural-blue transition-colors"></i>
               <span className="text-sm text-muted-foreground group-hover:text-neural-blue transition-colors">Twitter</span>
-            </a>
+            </div>
           </Card>
           <Card className="bg-gradient-card p-4 border-border/50 hover:border-blue-500/50 transition-all duration-300 group cursor-pointer">
-            <a href="https://linkedin.com/company/softwarelabs" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <i className="fa-brands fa-linkedin text-3xl mb-2 group-hover:text-blue-500 transition-colors"></i>
               <span className="text-sm text-muted-foreground group-hover:text-blue-500 transition-colors">LinkedIn</span>
-            </a>
+            </div>
           </Card>
           <Card className="bg-gradient-card p-4 border-border/50 hover:border-indigo-500/50 transition-all duration-300 group cursor-pointer">
-            <a href="https://discord.gg/softwarelabs" target="_blank" rel="noopener noreferrer" className="flex flex-col items-center">
+            <div className="flex flex-col items-center">
               <i className="fa-brands fa-discord text-3xl mb-2 group-hover:text-indigo-500 transition-colors"></i>
               <span className="text-sm text-muted-foreground group-hover:text-indigo-500 transition-colors">Discord</span>
-            </a>
+            </div>
           </Card>
         </div>
 

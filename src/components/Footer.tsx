@@ -49,60 +49,24 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex justify-center gap-4">
-            <a 
-              href="https://github.com/softwarelabs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-tech-green/20 hover:text-tech-green transition-all duration-300 hover:scale-110"
-              aria-label="GitHub"
-            >
+            <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-tech-green/20 hover:text-tech-green transition-all duration-300 hover:scale-110 cursor-pointer">
               <i className="fa-brands fa-github text-xl"></i>
-            </a>
-            <a 
-              href="https://twitter.com/softwarelabs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-neural-blue/20 hover:text-neural-blue transition-all duration-300 hover:scale-110"
-              aria-label="Twitter"
-            >
+            </div>
+            <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-neural-blue/20 hover:text-neural-blue transition-all duration-300 hover:scale-110 cursor-pointer">
               <i className="fa-brands fa-x-twitter text-xl"></i>
-            </a>
-            <a 
-              href="https://linkedin.com/company/softwarelabs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-blue-500/20 hover:text-blue-500 transition-all duration-300 hover:scale-110"
-              aria-label="LinkedIn"
-            >
+            </div>
+            <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-blue-500/20 hover:text-blue-500 transition-all duration-300 hover:scale-110 cursor-pointer">
               <i className="fa-brands fa-linkedin-in text-xl"></i>
-            </a>
-            <a 
-              href="https://instagram.com/softwarelabs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-pink-500/20 hover:text-pink-500 transition-all duration-300 hover:scale-110"
-              aria-label="Instagram"
-            >
+            </div>
+            <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-pink-500/20 hover:text-pink-500 transition-all duration-300 hover:scale-110 cursor-pointer">
               <i className="fa-brands fa-instagram text-xl"></i>
-            </a>
-            <a 
-              href="https://youtube.com/@softwarelabs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-red-500/20 hover:text-red-500 transition-all duration-300 hover:scale-110"
-              aria-label="YouTube"
-            >
+            </div>
+            <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-red-500/20 hover:text-red-500 transition-all duration-300 hover:scale-110 cursor-pointer">
               <i className="fa-brands fa-youtube text-xl"></i>
-            </a>
-            <a 
-              href="https://discord.gg/softwarelabs" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-indigo-500/20 hover:text-indigo-500 transition-all duration-300 hover:scale-110"
-              aria-label="Discord"
-            >
+            </div>
+            <div className="w-12 h-12 rounded-full bg-secondary/50 flex items-center justify-center text-foreground hover:bg-indigo-500/20 hover:text-indigo-500 transition-all duration-300 hover:scale-110 cursor-pointer">
               <i className="fa-brands fa-discord text-xl"></i>
-            </a>
+            </div>
           </div>
 
           {/* Organizational Structure */}
