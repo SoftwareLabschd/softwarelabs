@@ -36,13 +36,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="text-center space-y-8">
           {/* Logo and Tagline */}
-          <div>
+          <div className="flex flex-col items-center">
+            <img 
+              src="/logo.svg" 
+              alt="SoftwareLabs Logo" 
+              className="w-32 h-32 mb-4 hover:scale-105 transition-transform duration-300"
+            />
             <h3 className="text-3xl font-bold mb-2 animate-gradient-shift">
-              <i className="fa-solid fa-code text-tech-green mr-2"></i>
               ©SoftwareLabs
             </h3>
             <p className="text-muted-foreground animate-gradient-shift">
-              <i className="fa-solid fa-rocket text-cyber-purple mr-2"></i>
               Fueling the Future with Code & Creativity
             </p>
           </div>
