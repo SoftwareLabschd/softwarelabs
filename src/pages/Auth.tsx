@@ -38,11 +38,11 @@ export default function Auth() {
           {/* Left Side - Branding */}
           <div className="hidden lg:block space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse-glow">
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
+              <img 
+                src="/logo.svg" 
+                alt="SoftwareLabs Logo" 
+                className="w-24 h-24 hover:scale-105 transition-transform duration-300"
+              />
               <h2 className="text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 Welcome to SoftwareLabs
               </h2>
