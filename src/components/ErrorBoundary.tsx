@@ -28,10 +28,11 @@ class ErrorBoundary extends Component<Props, State> {
     this.setState({ errorInfo });
     this.props.onError?.(error, errorInfo);
     
-    // Log error to console in development
-    if (import.meta.env.DEV) {
-      console.error('ErrorBoundary caught an error:', error, errorInfo);
-    }
+    // 👇 ALWAYS log error (even in production for debugging)
+    console.error('🚨 ErrorBoundary caught an error:', error);
+    console.error('Error Message:', error.message);
+    console.error('Error Stack:', error.stack);
+    console.error('Component Stack:', errorInfo.componentStack);
   }
 
   handleRetry = () => {
@@ -63,7 +64,8 @@ class ErrorBoundary extends Component<Props, State> {
               We encountered an unexpected error. Don't worry, our team has been notified.
             </p>
 
-            {import.meta.env.DEV && this.state.error && (
+            {/* 👇 ALWAYS show error details (for debugging) */}
+            {this.state.error && (
               <div className="mb-6 p-4 bg-secondary/30 rounded-lg text-left">
                 <p className="text-sm font-mono text-destructive mb-2">
                   {this.state.error.message}
