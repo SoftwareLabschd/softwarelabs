@@ -13,10 +13,12 @@ createRoot(document.getElementById("root")!).render(
 );
 
 // Register service worker for PWA functionality (only in production)
+// 👇 COMMENT THIS OUT FOR NOW - We'll fix it later
+/*
 if (import.meta.env.PROD && 'serviceWorker' in navigator) {
   window.addEventListener('load', () => {
     navigator.serviceWorker
-      .register('/sw.js')
+      .register('/softwarelabs/sw.js')
       .then((registration) => {
         console.log('SW registered:', registration);
       })
@@ -25,7 +27,6 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
       });
   });
 } else if (import.meta.env.DEV && 'serviceWorker' in navigator) {
-  // Ensure no stale service worker interferes during development
   navigator.serviceWorker.getRegistrations().then((regs) => {
     regs.forEach((reg) => reg.unregister());
   });
@@ -33,3 +34,4 @@ if (import.meta.env.PROD && 'serviceWorker' in navigator) {
     caches.keys().then((keys) => keys.forEach((k) => caches.delete(k)));
   }
 }
+*/
