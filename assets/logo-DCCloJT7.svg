@@ -1,0 +1,24 @@
+<svg width="500" height="500" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="topArc" d="M 110 250 A 140 140 0 0 1 390 250" />
+    <path id="bottomArc" d="M 390 250 A 140 140 0 0 1 110 250" />
+  </defs>
+  <circle cx="250" cy="250" r="200" fill="none" stroke="#0A2540" stroke-width="8"/>
+  <circle cx="250" cy="250" r="170" fill="none" stroke="#C6A961" stroke-width="1.5"/>
+  <text fill="#0A2540" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="700" letter-spacing="4">
+    <textPath href="#topArc" startOffset="50%" text-anchor="middle" dominant-baseline="middle">
+      SOFTWARE LABS
+    </textPath>
+  </text>
+  <text fill="#C6A961" font-family="'Segoe UI', Helvetica, Arial, sans-serif" font-size="16" font-weight="500" letter-spacing="2">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle" dominant-baseline="middle">
+      FUELING THE FUTURE WITH CODE &amp; CREATIVITY
+    </textPath>
+  </text>
+  <text x="250" y="268" text-anchor="middle" font-family="'Segoe UI', system-ui, sans-serif"
+        font-size="56" font-weight="700" fill="#C6A961" dominant-baseline="middle">
+    ⌘
+  </text>
+  <circle cx="250" cy="90" r="3" fill="#C6A961"/>
+  <circle cx="250" cy="410" r="3" fill="#C6A961"/>
+</svg>
