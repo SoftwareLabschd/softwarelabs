@@ -1,12 +1,13 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
+import { LibraryInitializer } from "@/components/LibraryInitializer";
 
 function App() {
   return (
     <ErrorBoundary>
+      <LibraryInitializer />
       <div style={{ padding: '20px', color: 'white' }}>
-        <h1>🧗 Test Page</h1>
-        <p>If you see this, App.tsx is working!</p>
-        <p>Testing ErrorBoundary...</p>
+        <h1>🧗 Test Page - Step 2</h1>
+        <p>Testing LibraryInitializer...</p>
       </div>
     </ErrorBoundary>
   )
