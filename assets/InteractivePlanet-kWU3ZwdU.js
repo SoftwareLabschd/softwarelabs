@@ -1,4 +1,4 @@
-import{r as o,j as t}from"./index-Cee9snvS.js";const u=()=>{const s=o.useRef(null);return o.useEffect(()=>{const r=s.current;if(!r)return;const a=document.createElement("style");a.textContent=`
+import{r as o,j as t}from"./index-Bwp66OR0.js";const u=()=>{const s=o.useRef(null);return o.useEffect(()=>{const r=s.current;if(!r)return;const a=document.createElement("style");a.textContent=`
       @keyframes sparkle {
         0% { 
           opacity: 1; 
