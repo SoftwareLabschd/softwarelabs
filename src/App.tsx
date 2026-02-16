@@ -5,6 +5,10 @@ import PageTransition from "@/components/PageTransition";
 import SkipToContent from "@/components/SkipToContent";
 import { Routes, Route } from 'react-router-dom'
 
+// 👇 Import context providers
+import { AuthProvider } from './contexts/AuthContext'
+import { ThemeProvider } from './contexts/ThemeContext'
+
 // 👇 Import your page components
 import Index from './pages/Index'
 import Auth from './pages/Auth'
@@ -13,17 +17,21 @@ import NotFound from './pages/NotFound'
 function App() {
   return (
     <ErrorBoundary>
-      <SkipToContent />
-      <LibraryInitializer />
-      <PageTransition>
-        {/* <SuspenseFallback> */}
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/auth" element={<Auth />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        {/* </SuspenseFallback> */}
-      </PageTransition>
+      <ThemeProvider>
+        <AuthProvider>
+          <SkipToContent />
+          <LibraryInitializer />
+          <PageTransition>
+            {/* <SuspenseFallback> */}
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/auth" element={<Auth />} />
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            {/* </SuspenseFallback> */}
+          </PageTransition>
+        </AuthProvider>
+      </ThemeProvider>
     </ErrorBoundary>
   )
 }
