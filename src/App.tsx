@@ -1,8 +1,14 @@
 import ErrorBoundary from "@/components/ErrorBoundary";
 import { LibraryInitializer } from "@/components/LibraryInitializer";
 import PageTransition from "@/components/PageTransition";
-// import SuspenseFallback from "@/components/SuspenseFallback";  // 👈 Commented out
+// import SuspenseFallback from "@/components/SuspenseFallback";
 import SkipToContent from "@/components/SkipToContent";
+import { Routes, Route } from 'react-router-dom'
+
+// 👇 Import your page components
+import Index from './pages/Index'
+import Auth from './pages/Auth'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -10,12 +16,13 @@ function App() {
       <SkipToContent />
       <LibraryInitializer />
       <PageTransition>
-        {/* <SuspenseFallback> */}  {/* 👈 Commented out */}
-          <div style={{ padding: '20px', color: 'white' }}>
-            <h1>🧗 Test Page - Step 4 (Fixed)</h1>
-            <p>SuspenseFallback skipped - loader was stuck!</p>
-          </div>
-        {/* </SuspenseFallback> */}  {/* 👈 Commented out */}
+        {/* <SuspenseFallback> */}
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/auth" element={<Auth />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        {/* </SuspenseFallback> */}
       </PageTransition>
     </ErrorBoundary>
   )
