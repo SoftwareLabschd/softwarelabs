@@ -1,73 +1,277 @@
-# Welcome to your Lovable project
+# 🚀 Software Labs — Modern Full-Stack Web Platform
 
-## Project info
+<p align="center">
 
-**URL**: https://lovable.dev/projects/2c5f6693-cb8a-42e4-877f-92710a983f0b
+<img src="https://img.shields.io/badge/STATUS-LIVE-success?style=for-the-badge" />
+<img src="https://img.shields.io/badge/LICENSE-MIT-blue?style=for-the-badge" />
+<img src="https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+<img src="https://img.shields.io/badge/TypeScript-5.8.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+<img src="https://img.shields.io/badge/Vite-5.4.19-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
 
-## How can I edit this code?
+</p>
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+<p align="center">
+<b>⚡ Fast • 🔐 Secure • 🎨 Beautiful • 📱 Responsive • ☁ Cloud Powered</b>
+</p>
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/2c5f6693-cb8a-42e4-877f-92710a983f0b) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🌐 Live Demo
 
-**Use your preferred IDE**
+### 🔗 Production Website
+👉 https://softwarelabschd.github.io/softwarelabs/
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 📖 About The Project
 
-Follow these steps:
+**Software Labs** is a production-ready modern web application built using modern frontend architecture and cloud backend services.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+It focuses on:
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Performance optimization  
+- Modern UI/UX experience  
+- Scalable architecture  
+- Secure authentication  
+- Clean developer workflow  
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+## ✨ Feature Showcase
+
+### 🎨 UI / UX
+- Gradient modern interface
+- Smooth page transitions
+- Micro-interaction animations
+- Responsive across all devices
+- Theme persistence (Dark / Light)
+
+---
+
+### 🔐 Authentication
+- Secure login/signup
+- Session persistence
+- Protected routes
+- Validation using schema-based checks
+
+---
+
+### ⚡ Performance
+- Ultra-fast Vite builds
+- Lazy loading modules
+- Optimized bundle output
+- Service Worker ready (PWA Support)
+
+---
+
+### ♿ Accessibility & SEO
+- ARIA labels support
+- Keyboard navigation friendly
+- SEO meta optimized
+- Semantic HTML structure
+
+---
+
+## 🛠 Tech Stack
+
+### 🖥 Frontend
+
+| Category | Technology |
+|---|---|
+| Framework | React 18 |
+| Language | TypeScript |
+| Build Tool | Vite |
+| Styling | Tailwind CSS |
+| UI Components | shadcn/ui + Radix UI |
+| Routing | React Router DOM |
+
+---
+
+### 🧠 State & Data
+
+| Purpose | Tool |
+|---|---|
+| Global State | React Context |
+| Server State | TanStack Query |
+| Forms | React Hook Form |
+| Validation | Zod |
+
+---
+
+### ☁ Backend & Cloud
+
+| Service | Technology |
+|---|---|
+| Backend / Database | Supabase |
+| Authentication | Supabase Auth |
+| Storage | Supabase Storage |
+
+---
+
+### 🎬 UI Enhancements
+
+| Feature | Tool |
+|---|---|
+| Animations | Framer Motion |
+| Icons | Lucide React + Font Awesome |
+
+---
+
+## 📁 Project Structure
+
+```
+softwarelabs/
+│
+├── .github/
+│   └── workflows/
+│
+├── public/
+│   ├── index.html
+│   └── sw.js
+│
+├── src/
+│   ├── components/
+│   │   ├── ui/
+│   │   ├── auth/
+│   │   ├── Hero.tsx
+│   │   ├── AboutSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   ├── ContactSection.tsx
+│   │   ├── ErrorBoundary.tsx
+│   │   └── PageTransition.tsx
+│   │
+│   ├── contexts/
+│   │   ├── AuthContext.tsx
+│   │   └── ThemeContext.tsx
+│   │
+│   ├── hooks/
+│   │   └── use-mobile.tsx
+│   │
+│   ├── lib/
+│   │   └── supabase.ts
+│   │
+│   ├── pages/
+│   │   ├── Index.tsx
+│   │   ├── Auth.tsx
+│   │   └── NotFound.tsx
+│   │
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+│
+├── .env
+├── .gitignore
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
+```
+
+---
+
+## 🚀 Getting Started
+
+### 📦 Installation
+
+```bash
+git clone https://github.com/softwarelabschd/softwarelabs.git
+cd softwarelabs
+npm install
+```
+
+---
+
+### ▶ Run Development Server
+
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### 🏗 Build Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 🤝 Contributing
 
-This project is built with:
+1. Fork the repository  
+2. Create your feature branch  
+```
+git checkout -b feature/amazing-feature
+```
+3. Commit your changes  
+```
+git commit -m "Add amazing feature"
+```
+4. Push to branch  
+```
+git push origin feature/amazing-feature
+```
+5. Open Pull Request  
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+---
 
-## How can I deploy this project?
+## 🧾 Code Standards
 
-Simply open [Lovable](https://lovable.dev/projects/2c5f6693-cb8a-42e4-877f-92710a983f0b) and click on Share -> Publish.
+- TypeScript required for new files  
+- Follow ESLint rules  
+- Format using Prettier  
+- Use meaningful commit messages  
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## 📄 License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Licensed under **MIT License**
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+See `LICENSE` file for details.
+
+---
+
+## 👨‍💻 Author
+
+**Paras367**
+
+🐙 GitHub  
+https://github.com/Paras367  
+
+🌐 Website  
+https://softwarelabschd.github.io/softwarelabs/
+
+---
+
+## 🙏 Acknowledgments
+
+- Vite  
+- React  
+- Supabase  
+- shadcn/ui  
+- Tailwind CSS  
+- Radix UI  
+
+---
+
+## 📞 Support
+
+If you need help:
+
+📌 Open GitHub Issue  
+📌 Check Documentation  
+📧 softwarelabschd@gmail.com  
+
+---
+
+<p align="center">
+
+### ❤️ Made with passion by Software Labs
+
+⭐ Star this repository if you like it!
+
+</p>
